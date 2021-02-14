@@ -1,0 +1,173 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  color: white;
+}
+
+.main-container {
+  max-width: 100vw;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". nav nav ." ". header header ." ". content content ." ". contact contact .";
+  grid-gap: 50px;
+}
+
+.nav-container {
+  grid-area: nav;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.nav-modal {
+  display: none;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.nav-link-list {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  justify-content: flex-end;
+  gap: 10%;
+  float: right;
+  clear: both;
+}
+
+.section-container {
+  max-width: 100vw;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2.5% 0%;
+  border: 1px solid white;
+}
+
+.header-section {
+  grid-area: header;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.project-section {
+  grid-area: content;
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+
+.article-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 2.5% 2.5%;
+  border: 1px solid white;
+  font-size: 110%;
+}
+
+.project-item {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding: 2.5% 0%;
+  box-sizing: border-box;
+}
+
+.about-section {
+  display: none;
+  grid-area: content;
+}
+
+.contact-section {
+  grid-area: contact;
+}
+
+.nav-menu-collapse {
+  display: none;
+}
+
+.nav-link-item {
+  list-style: none;
+}
+
+.nav-link-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.section-heading {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.project-img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px;
+  object-fit: cover;
+}
+
+.project-number {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.project-link-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  list-style: none;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  padding-inline-start: 0;
+}
+
+.project-link {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.project-link a {
+  text-decoration: none;
+  color: white;
+}
+
+.project-description {
+  font-size: 110%;
+}
+
+.project-heading {
+  font-size: 200%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
