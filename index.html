@@ -6,80 +6,72 @@
         <title>Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="sass/main.css">
     </head>
     <body>
+      <!-- Page Container -->
         <main class="main-container">
-            <nav class="section-container nav-container">
-              <div class="nav-menu">
-                <ul class="nav-link-list">
-                  <li class="nav-link-item">
-                    <a href="#home">Home</a>
-                  </li>
-                  <li class="nav-link-item">
-                    <a href="#projects">Projects</a>
-                  </li>
-                  <li class="nav-link-item">
-                    <a href="#about">About</a>
-                  </li>
-                  <li class="nav-link-item">
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <a class="nav-menu-collapse" href="index.html">Menu</a>
-              <div class="nav-modal">
-                <a class="close-btn" href="#home">x</a>
-                <ul class="nav-modal-list">
-                  <li class="nav-modal-item">
-                    <a href="#home">Home</a>
-                  </li>
-                  <li class="nav-modal-item">
-                    <a href="#projects">Projects</a>
-                  </li>
-                  <li class="nav-modal-item">
-                    <a href="#about">About</a>
-                  </li>
-                  <li class="nav-modal-item">
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-                <ul class="social-modal-list">
-                  <li class="social-modal-item">
-                    <a href="#">Github</a>
-                    </li>
-                  <li class="social-modal-item">
-                    <a href="#">LinkedIn</a>
-                    </li>
-                  <li class="social-modal-item">
-                    <a href="#">CodePen</a>
-                    </li>
-                </ul>
-            </nav>
-            <header class="section-container header-section">
+            <header class="section-container" id="header-section">
               <div class="header-wrapper">
                 <h1 class="header-title">Daniel Babin</h1>
-                <p>Welcome to my portfolio website, my name is Daniel and I am a Front End Developer.</p>
-                <div class="arrow-btn">
-                  <a href="#">v</a>
+                <p>Welcome to my portfolio website,</p>
+                <p>my name is Daniel and I am a Front End Developer.</p>
+                <p>daniel.l.babin@gmail.com</p>
+                <div class="animation-wrapper">
+                  <span class="header-animation animation-daniel">Daniel</span>
+                  <span class="header-animation animation-babin">Babin</span>
+                </div>
+                <div class="arrow-btn-wrapper">
+                  <a href="#project-anchor"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="25" height="20" viewBox="0 0 1280.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff">
+                    <path d="M310 12781 c-165 -52 -251 -144 -296 -314 -17 -64 -17 -71 -1 -134 12 -50 832 -1698 3036 -6110 2831 -5664 3023 -6044 3071 -6092 59 -59 119 -92 213 -117 64 -17 70 -17 134 0 94 25 159 60 215 118 45 46 321 593 3069 6092 2204 4409 3024 6059 3036 6109 16 63 16 70 -1 134 -47 177 -142 272 -319 319 -64 17 -70 17 -134 0 -36 -9 -84 -26 -106 -38 -22 -11 -1336 -884 -2921 -1941 -1911 -1275 -2889 -1922 -2906 -1922 -17 0 -995 647 -2906 1922 -1585 1057 -2899 1930 -2920 1941 -51 26 -145 52 -181 51 -15 0 -53 -9 -83 -18z"/>
+                    </g>
+                    </svg></a>
                 </div>
             </div>
             </header>
-            <section class="section-container project-section">
+            <nav class="nav-container">
+              <ul class="nav-link-list">
+                <a href="#project-anchor" class="active"><li class="nav-link-item">
+                  Projects
+                  </li></a>
+                <a href="#about"><li class="nav-link-item">
+                  About
+                  </li></a>
+                <a href="#contact"><li class="nav-link-item">
+                  Contact
+                  </li></a>
+                </ul>
+              <ul class="nav-social-list">
+                <a href="#"><li class="nav-social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-10 0 250 60"><path d="M26.896 43.398v8.704H0V9.043h9.433v34.355zM31.062 22.9h9.066v29.2h-9.066zm4.534-14.505a5.26 5.26 0 0 1 5.259 5.257c0 2.906-2.356 5.255-5.26 5.255s-5.256-2.35-5.256-5.255a5.26 5.26 0 0 1 5.256-5.257m61.76 14.502h11.1l-11.9 13.5L108.207 52.1H96.825l-9.62-14.425h-.117V52.1h-9.063V9.04h9.063v25.735zm-52.212.017h8.702v4h.12c1.208-2.297 4.17-4.713 8.58-4.713 9.188 0 10.88 6.043 10.88 13.898v16H64.36V37.903c0-3.386-.062-7.735-4.716-7.735-4.713 0-5.436 3.687-5.436 7.493v14.43h-9.066V22.914zm82.407 11.194c.06-3.022-2.298-5.56-5.564-5.56-3.987 0-6.164 2.72-6.403 5.56zm7.674 12.93c-2.9 3.687-7.673 5.804-12.4 5.804-9.064 0-16.317-6.047-16.317-15.414s7.253-15.4 16.317-15.4c8.468 0 13.78 6.043 13.78 15.4v2.84h-21.032c.72 3.445 3.323 5.68 6.83 5.68 2.962 0 4.955-1.5 6.467-3.567zm20.27-17.072c-4.53 0-7.248 3.024-7.248 7.432 0 4.416 2.72 7.434 7.248 7.434 4.536 0 7.257-3.018 7.257-7.434-.001-4.408-2.72-7.432-7.257-7.432m15.6 22.12h-8.342v-3.87h-.118c-1.395 2.115-4.897 4.594-9.008 4.594-8.706 0-14.446-6.283-14.446-15.17 0-8.16 5.076-15.654 13.416-15.654 3.75 0 7.255 1.027 9.3 3.867h.118V9.04h9.07z"/><path d="M236.78 0h-52.107c-2.5 0-4.513 1.974-4.513 4.406v52.327c0 2.435 2.023 4.41 4.513 4.41h52.107c2.494 0 4.526-1.976 4.526-4.41V4.406C241.307 1.974 239.275 0 236.78 0z" fill="#0177b5"/><path d="M189.226 22.923h9.07v29.18h-9.07zm4.537-14.505a5.26 5.26 0 0 1 5.255 5.257 5.26 5.26 0 0 1-5.255 5.259 5.26 5.26 0 0 1-5.26-5.259 5.26 5.26 0 0 1 5.26-5.257m10.22 14.505h8.698V26.9h.12c1.2-2.294 4.17-4.713 8.58-4.713 9.184 0 10.88 6.044 10.88 13.9v16.005H223.2v-14.2c0-3.384-.062-7.737-4.713-7.737-4.72 0-5.443 3.686-5.443 7.492v14.435h-9.06v-29.18z" fill="#000"/></svg>
+                  </li></a>
+                <a href="https://github.com/dbabs629?tab=stars"><li class="nav-social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-45 0 470 90"><path d="M69.37,41.69H39.11a1.41,1.41,0,0,0-1.42,1.42V57.9a1.42,1.42,0,0,0,1.42,1.42h11.8V77.71s-2.65.9-10,.9c-8.65,0-20.73-3.16-20.73-29.72S32.78,18.82,44.59,18.82c10.23,0,14.63,1.8,17.43,2.67a1.43,1.43,0,0,0,1.7-1.39L67.09,5.8a1.31,1.31,0,0,0-.54-1.1C65.41,3.88,58.47,0,40.93,0,20.73,0,0,8.6,0,49.92S23.73,97.41,43.73,97.41c16.55,0,26.6-7.08,26.6-7.08a1.23,1.23,0,0,0,.46-1.07V43.11A1.42,1.42,0,0,0,69.37,41.69Z"/><path class="cls-1" d="M225.36,5A1.41,1.41,0,0,0,224,3.53h-17A1.41,1.41,0,0,0,205.5,5V37.89H178.94V5a1.41,1.41,0,0,0-1.41-1.42h-17A1.41,1.41,0,0,0,159.08,5V94.13a1.42,1.42,0,0,0,1.41,1.43h17a1.42,1.42,0,0,0,1.41-1.43V56H205.5l0,38.15a1.42,1.42,0,0,0,1.41,1.43H224a1.43,1.43,0,0,0,1.41-1.43Z"/><path class="cls-1" d="M101.53,16.65a11,11,0,1,0-11,11.11A11,11,0,0,0,101.53,16.65Z"/><path class="cls-1" d="M100.31,75.32V34.15a1.42,1.42,0,0,0-1.41-1.42h-17a1.63,1.63,0,0,0-1.47,1.59v59c0,1.74,1.08,2.25,2.48,2.25h15.3c1.68,0,2.09-.82,2.09-2.27Z"/><path class="cls-1" d="M290.12,32.87H273.21a1.41,1.41,0,0,0-1.4,1.42V78a19.14,19.14,0,0,1-10.4,3.14c-6.1,0-7.72-2.76-7.72-8.74V34.29a1.41,1.41,0,0,0-1.4-1.42H235.12a1.41,1.41,0,0,0-1.4,1.42v41c0,17.74,9.88,22.08,23.48,22.08,11.15,0,20.15-6.17,20.15-6.17a34.29,34.29,0,0,0,.62,3.64,1.49,1.49,0,0,0,1.24.77l10.92,0a1.42,1.42,0,0,0,1.41-1.42V34.29A1.43,1.43,0,0,0,290.12,32.87Z"/><path class="cls-1" d="M336.35,30.86a31.76,31.76,0,0,0-16.14,4.29V5a1.41,1.41,0,0,0-1.41-1.42H301.71A1.41,1.41,0,0,0,300.3,5V94.13a1.42,1.42,0,0,0,1.41,1.43h11.86a1.43,1.43,0,0,0,1.24-.76,28.4,28.4,0,0,0,.72-4.11s7,6.62,20.22,6.62c15.53,0,24.43-7.88,24.43-35.37S346,30.86,336.35,30.86Zm-6.67,50.25a20.31,20.31,0,0,1-9.85-2.84V50a22.54,22.54,0,0,1,8.74-2.84c6.09-.54,12,1.3,12,15.82C340.53,78.33,337.88,81.36,329.68,81.11Z"/><path class="cls-1" d="M149.29,32.72H136.51l0-16.88c0-.64-.33-1-1.07-1H118c-.68,0-1,.3-1,.95V33.28s-8.73,2.11-9.32,2.28a1.41,1.41,0,0,0-1,1.36v11A1.42,1.42,0,0,0,108,49.31H117V75.69c0,19.6,13.75,21.52,23,21.52a38.91,38.91,0,0,0,10.15-1.67,1.32,1.32,0,0,0,.8-1.28V82.2a1.43,1.43,0,0,0-1.41-1.42c-.75,0-2.65.3-4.61.3-6.28,0-8.41-2.92-8.41-6.7V49.31h12.78a1.42,1.42,0,0,0,1.41-1.43V34.15A1.42,1.42,0,0,0,149.29,32.72Z"/></svg>
+                  </li></a>
+                <a href="https://codepen.io/collection/nGarpy"><li class="nav-social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="code-pen" width="30" height="25" viewBox="0 0 135 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"/>
+                    </svg>
+                  </li></a>
+              </ul>
+            </nav>
+            <div class="content-container">
+            <section class="section-container project-section" id="project-anchor">
               <h2 class="section-heading">Projects</h2>
               <article class="article-wrapper">
                 <h4 class="project-number">Project 1</h2>
                 <h3 class="project-heading">Rock Paper Scissors Game</h3>
                 <div class="project-item project-img-wrapper">
-                  <a href="#">
-                    <img class="project-img" src="assets/clock.PNG">
+                  <a href="http://getdaniel.me/rockpaperscissors/" target="_blank" rel="noreferrer noopener">
+                    <img class="project-img" src="assets/rps.png">
                   </a>
                 </div>
                 <div class="project-item project-info">
                   <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
                   <ul class="project-link-list">
-                    <li class="project-link"><a href="#">Demo</a></li>
-                    <li class="project-link"><a href="#">Code</a></li>
+                    <a href="http://getdaniel.me/rockpaperscissors/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
+                    <a href="https://github.com/dbabs629/rock-paper-scissors-lizard-spock" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
                   </ul>
                 </div>
               </article>
@@ -87,15 +79,15 @@
                 <h4 class="project-number">Project 2</h2>
                 <h3 class="project-heading">Clock + API's App</h3>
                 <div class="project-item project-img-wrapper">
-                  <a href="#">
-                    <img class="project-img" src="assets/rps.PNG">
+                  <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener">
+                    <img class="project-img" src="assets/clock.png" target="_blank" rel="noreferrer noopener">
                   </a>
                 </div>
                 <div class="project-item project-info">
                   <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
                   <ul class="project-link-list">
-                    <li class="project-link"><a href="#">Demo</a></li>
-                    <li class="project-link"><a href="#">Code</a></li>
+                    <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
+                    <a href="https://github.com/dbabs629/clock-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
                   </ul>
                 </div>
               </article>
@@ -103,15 +95,15 @@
                 <h4 class="project-number">Project 3</h2>
                 <h3 class="project-heading">Count Down Timer</h3>
                 <div class="project-item project-img-wrapper">
-                  <a href="#">
-                    <img class="project-img" src="assets/countdown.PNG">
+                  <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener">
+                    <img class="project-img" src="assets/countdown.png">
                   </a>
                 </div>
                 <div class="project-item project-info">
                   <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
                   <ul class="project-link-list">
-                    <li class="project-link"><a href="#">Demo</a></li>
-                    <li class="project-link"><a href="#">Code</a></li>
+                    <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
+                    <a href="https://github.com/dbabs629/count-down-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
                   </ul>
                 </div>
               </article>
@@ -119,20 +111,20 @@
                 <h4 class="project-number">Project 4</h2>
                 <h3 class="project-heading">Ip Address Tracker</h3>
                 <div class="project-item project-img-wrapper">
-                  <a href="#">
-                    <img class="project-img" src="assets/clock.PNG">
+                  <a href="http://getdaniel.me/ip-address-tracker/" target="_blank" rel="noreferrer noopener">
+                    <img class="project-img" src="assets/ip-address-tracker.PNG">
                   </a>
                 </div>
                 <div class="project-item project-info">
                   <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
                   <ul class="project-link-list">
-                    <li class="project-link"><a href="#">Demo</a></li>
-                    <li class="project-link"><a href="#">Code</a></li>
+                    <a href="http://getdaniel.me/ip-address-tracker/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
+                    <a href="https://github.com/dbabs629/ip-tracker-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
                   </ul>
                 </div>
               </article>
             </section>
-            <section class="section-container about-section">
+            <section class="section-container about-section" id="about">
               <h2 class="section-heading">About</h2>
               <h3 class="about-heading">What I can tell you about me</h3>
               <p class="about-content">I graduated from the three year Web Design and Interactive Media advanced Diploma Program at Humber College in 2020. While I attended the program, I learned front-end technologies, design and ux principles as well as how to utilize databases for my projects. I am constantly updating my knowledge base, I am currently learning the MERN stack (MongoDB, Express.js, React.js & Node.js) on LinkedIn Learning. I am a dedicated problem solver and a good team player who will help & collaborate to solve difficult tasks. I am looking to join a great team and continue to grow as a front-end developer.</p>
@@ -140,7 +132,7 @@
                 <img class=about-img src="">
               </div>
             </section>
-            <footer class="section-container contact-section">
+            <footer class="section-container contact-section" id="contact">
               <h2 class="section-heading">Contact</h2>
               <div class="contact-item">
                   <h4 class="contact-heading">Email</h4>
@@ -160,6 +152,7 @@
                 </ul>
               </div>
             </footer>
+            </div>
           </main>
         <script src="./scripts/scripts.js"></script>
     </body>

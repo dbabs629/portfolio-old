@@ -1,0 +1,19 @@
+ul a:hover
+  background-color: $highlight-light
+
+.active
+  background-color: $tertiary-color
+  color: black
+
+.active:hover
+  background-color: $tertiary-color
+
+.animation-daniel
+  animation: daniel-slide 1s ease-in-out 0s 1 alternate
+  animation-fill-mode: both
+
+@keyframes daniel-slide
+  0%
+    opacity: 100
+  100% 
+    opacity: 0
