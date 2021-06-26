@@ -1,160 +1,746 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="sass/main.css">
-    </head>
-    <body>
-      <!-- Page Container -->
-        <main class="main-container">
-            <header class="section-container" id="header-section">
-              <div class="header-wrapper">
-                <h1 class="header-title">Daniel Babin</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sass/main.css">
+    <script src="./scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Page Container -->
+    <main class="main-container">
+        <header class="header-section">
+            <div class="header-wrapper">
+                <!-- <h1 class="header-title">Daniel Babin</h1> -->
                 <p>Welcome to my portfolio website,</p>
                 <p>my name is Daniel and I am a Front End Developer.</p>
                 <p>daniel.l.babin@gmail.com</p>
+                <br><br>
+                <p>Check out my portfolio websites code <a href="" class="portfolio-link">here</a></p>
                 <div class="animation-wrapper">
-                  <p class="header-animation animation-daniel"><p>Daniel</p>
-                  <p class="header-animation animation-babin"><p>Babin</p>
-                </div>
-                <div class="arrow-btn-wrapper">
-                  <p>Check out my portfolio websites code <a href="">here</a></p>
-                  <a href="#project-anchor"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="25" height="20" viewBox="0 0 1280.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
-                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff">
-                    <path d="M310 12781 c-165 -52 -251 -144 -296 -314 -17 -64 -17 -71 -1 -134 12 -50 832 -1698 3036 -6110 2831 -5664 3023 -6044 3071 -6092 59 -59 119 -92 213 -117 64 -17 70 -17 134 0 94 25 159 60 215 118 45 46 321 593 3069 6092 2204 4409 3024 6059 3036 6109 16 63 16 70 -1 134 -47 177 -142 272 -319 319 -64 17 -70 17 -134 0 -36 -9 -84 -26 -106 -38 -22 -11 -1336 -884 -2921 -1941 -1911 -1275 -2889 -1922 -2906 -1922 -17 0 -995 647 -2906 1922 -1585 1057 -2899 1930 -2920 1941 -51 26 -145 52 -181 51 -15 0 -53 -9 -83 -18z"/>
-                    </g>
-                    </svg></a>
+                    <p class="header-animation slide-left" id="animation-daniel">Daniel</p>
+                    <p class="header-animation slide-right" id="animation-babin">Babin</p>
                 </div>
             </div>
-            </header>
-            <nav class="nav-container">
-              <ul class="nav-link-list">
-                <a href="#project-anchor" class="project-tab active"><li class="nav-link-item">
-                  Projects
-                  </li></a>
-                <a href="#about-anchor" class="about-tab"><li class="nav-link-item">
-                  About
-                  </li></a>
-                <a href="#contact-anchor" class="contact-tab"><li class="nav-link-item">
-                  Contact
-                  </li></a>
-                </ul>
-              <ul class="nav-social-list">
-                <a href="#"><li class="nav-social-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-10 0 250 60"><path d="M26.896 43.398v8.704H0V9.043h9.433v34.355zM31.062 22.9h9.066v29.2h-9.066zm4.534-14.505a5.26 5.26 0 0 1 5.259 5.257c0 2.906-2.356 5.255-5.26 5.255s-5.256-2.35-5.256-5.255a5.26 5.26 0 0 1 5.256-5.257m61.76 14.502h11.1l-11.9 13.5L108.207 52.1H96.825l-9.62-14.425h-.117V52.1h-9.063V9.04h9.063v25.735zm-52.212.017h8.702v4h.12c1.208-2.297 4.17-4.713 8.58-4.713 9.188 0 10.88 6.043 10.88 13.898v16H64.36V37.903c0-3.386-.062-7.735-4.716-7.735-4.713 0-5.436 3.687-5.436 7.493v14.43h-9.066V22.914zm82.407 11.194c.06-3.022-2.298-5.56-5.564-5.56-3.987 0-6.164 2.72-6.403 5.56zm7.674 12.93c-2.9 3.687-7.673 5.804-12.4 5.804-9.064 0-16.317-6.047-16.317-15.414s7.253-15.4 16.317-15.4c8.468 0 13.78 6.043 13.78 15.4v2.84h-21.032c.72 3.445 3.323 5.68 6.83 5.68 2.962 0 4.955-1.5 6.467-3.567zm20.27-17.072c-4.53 0-7.248 3.024-7.248 7.432 0 4.416 2.72 7.434 7.248 7.434 4.536 0 7.257-3.018 7.257-7.434-.001-4.408-2.72-7.432-7.257-7.432m15.6 22.12h-8.342v-3.87h-.118c-1.395 2.115-4.897 4.594-9.008 4.594-8.706 0-14.446-6.283-14.446-15.17 0-8.16 5.076-15.654 13.416-15.654 3.75 0 7.255 1.027 9.3 3.867h.118V9.04h9.07z"/><path d="M236.78 0h-52.107c-2.5 0-4.513 1.974-4.513 4.406v52.327c0 2.435 2.023 4.41 4.513 4.41h52.107c2.494 0 4.526-1.976 4.526-4.41V4.406C241.307 1.974 239.275 0 236.78 0z" fill="#0177b5"/><path d="M189.226 22.923h9.07v29.18h-9.07zm4.537-14.505a5.26 5.26 0 0 1 5.255 5.257 5.26 5.26 0 0 1-5.255 5.259 5.26 5.26 0 0 1-5.26-5.259 5.26 5.26 0 0 1 5.26-5.257m10.22 14.505h8.698V26.9h.12c1.2-2.294 4.17-4.713 8.58-4.713 9.184 0 10.88 6.044 10.88 13.9v16.005H223.2v-14.2c0-3.384-.062-7.737-4.713-7.737-4.72 0-5.443 3.686-5.443 7.492v14.435h-9.06v-29.18z" fill="#000"/></svg>
-                  </li></a>
-                <a href="https://github.com/dbabs629?tab=stars"><li class="nav-social-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-45 0 470 90"><path d="M69.37,41.69H39.11a1.41,1.41,0,0,0-1.42,1.42V57.9a1.42,1.42,0,0,0,1.42,1.42h11.8V77.71s-2.65.9-10,.9c-8.65,0-20.73-3.16-20.73-29.72S32.78,18.82,44.59,18.82c10.23,0,14.63,1.8,17.43,2.67a1.43,1.43,0,0,0,1.7-1.39L67.09,5.8a1.31,1.31,0,0,0-.54-1.1C65.41,3.88,58.47,0,40.93,0,20.73,0,0,8.6,0,49.92S23.73,97.41,43.73,97.41c16.55,0,26.6-7.08,26.6-7.08a1.23,1.23,0,0,0,.46-1.07V43.11A1.42,1.42,0,0,0,69.37,41.69Z"/><path class="cls-1" d="M225.36,5A1.41,1.41,0,0,0,224,3.53h-17A1.41,1.41,0,0,0,205.5,5V37.89H178.94V5a1.41,1.41,0,0,0-1.41-1.42h-17A1.41,1.41,0,0,0,159.08,5V94.13a1.42,1.42,0,0,0,1.41,1.43h17a1.42,1.42,0,0,0,1.41-1.43V56H205.5l0,38.15a1.42,1.42,0,0,0,1.41,1.43H224a1.43,1.43,0,0,0,1.41-1.43Z"/><path class="cls-1" d="M101.53,16.65a11,11,0,1,0-11,11.11A11,11,0,0,0,101.53,16.65Z"/><path class="cls-1" d="M100.31,75.32V34.15a1.42,1.42,0,0,0-1.41-1.42h-17a1.63,1.63,0,0,0-1.47,1.59v59c0,1.74,1.08,2.25,2.48,2.25h15.3c1.68,0,2.09-.82,2.09-2.27Z"/><path class="cls-1" d="M290.12,32.87H273.21a1.41,1.41,0,0,0-1.4,1.42V78a19.14,19.14,0,0,1-10.4,3.14c-6.1,0-7.72-2.76-7.72-8.74V34.29a1.41,1.41,0,0,0-1.4-1.42H235.12a1.41,1.41,0,0,0-1.4,1.42v41c0,17.74,9.88,22.08,23.48,22.08,11.15,0,20.15-6.17,20.15-6.17a34.29,34.29,0,0,0,.62,3.64,1.49,1.49,0,0,0,1.24.77l10.92,0a1.42,1.42,0,0,0,1.41-1.42V34.29A1.43,1.43,0,0,0,290.12,32.87Z"/><path class="cls-1" d="M336.35,30.86a31.76,31.76,0,0,0-16.14,4.29V5a1.41,1.41,0,0,0-1.41-1.42H301.71A1.41,1.41,0,0,0,300.3,5V94.13a1.42,1.42,0,0,0,1.41,1.43h11.86a1.43,1.43,0,0,0,1.24-.76,28.4,28.4,0,0,0,.72-4.11s7,6.62,20.22,6.62c15.53,0,24.43-7.88,24.43-35.37S346,30.86,336.35,30.86Zm-6.67,50.25a20.31,20.31,0,0,1-9.85-2.84V50a22.54,22.54,0,0,1,8.74-2.84c6.09-.54,12,1.3,12,15.82C340.53,78.33,337.88,81.36,329.68,81.11Z"/><path class="cls-1" d="M149.29,32.72H136.51l0-16.88c0-.64-.33-1-1.07-1H118c-.68,0-1,.3-1,.95V33.28s-8.73,2.11-9.32,2.28a1.41,1.41,0,0,0-1,1.36v11A1.42,1.42,0,0,0,108,49.31H117V75.69c0,19.6,13.75,21.52,23,21.52a38.91,38.91,0,0,0,10.15-1.67,1.32,1.32,0,0,0,.8-1.28V82.2a1.43,1.43,0,0,0-1.41-1.42c-.75,0-2.65.3-4.61.3-6.28,0-8.41-2.92-8.41-6.7V49.31h12.78a1.42,1.42,0,0,0,1.41-1.43V34.15A1.42,1.42,0,0,0,149.29,32.72Z"/></svg>
-                  </li></a>
-                <a href="https://codepen.io/collection/nGarpy"><li class="nav-social-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="code-pen" width="30" height="25" viewBox="0 0 135 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"/>
-                    </svg>
-                  </li></a>
-              </ul>
-            </nav>
-            <div class="content-container">
+        </header>
+        <nav class="nav-container">
+            <ul class="nav-link-list">
+                <a href="#project-anchor" class="project-tab active">
+                    <li class="nav-link-item">
+                        Projects
+                    </li>
+                </a>
+                <a href="#about-anchor" class="about-tab">
+                    <li class="nav-link-item">
+                        About
+                    </li>
+                </a>
+                <a href="#contact-anchor" class="contact-tab">
+                    <li class="nav-link-item">
+                        Contact
+                    </li>
+                </a>
+            </ul>
+            <ul class="nav-social-list">
+                <a href="https://www.linkedin.com/in/daniel-babin/" target="_blank" rel="noreferrer noopener">
+                    <li class="nav-social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-10 0 250 60">
+                            <path
+                                d="M26.896 43.398v8.704H0V9.043h9.433v34.355zM31.062 22.9h9.066v29.2h-9.066zm4.534-14.505a5.26 5.26 0 0 1 5.259 5.257c0 2.906-2.356 5.255-5.26 5.255s-5.256-2.35-5.256-5.255a5.26 5.26 0 0 1 5.256-5.257m61.76 14.502h11.1l-11.9 13.5L108.207 52.1H96.825l-9.62-14.425h-.117V52.1h-9.063V9.04h9.063v25.735zm-52.212.017h8.702v4h.12c1.208-2.297 4.17-4.713 8.58-4.713 9.188 0 10.88 6.043 10.88 13.898v16H64.36V37.903c0-3.386-.062-7.735-4.716-7.735-4.713 0-5.436 3.687-5.436 7.493v14.43h-9.066V22.914zm82.407 11.194c.06-3.022-2.298-5.56-5.564-5.56-3.987 0-6.164 2.72-6.403 5.56zm7.674 12.93c-2.9 3.687-7.673 5.804-12.4 5.804-9.064 0-16.317-6.047-16.317-15.414s7.253-15.4 16.317-15.4c8.468 0 13.78 6.043 13.78 15.4v2.84h-21.032c.72 3.445 3.323 5.68 6.83 5.68 2.962 0 4.955-1.5 6.467-3.567zm20.27-17.072c-4.53 0-7.248 3.024-7.248 7.432 0 4.416 2.72 7.434 7.248 7.434 4.536 0 7.257-3.018 7.257-7.434-.001-4.408-2.72-7.432-7.257-7.432m15.6 22.12h-8.342v-3.87h-.118c-1.395 2.115-4.897 4.594-9.008 4.594-8.706 0-14.446-6.283-14.446-15.17 0-8.16 5.076-15.654 13.416-15.654 3.75 0 7.255 1.027 9.3 3.867h.118V9.04h9.07z" />
+                            <path
+                                d="M236.78 0h-52.107c-2.5 0-4.513 1.974-4.513 4.406v52.327c0 2.435 2.023 4.41 4.513 4.41h52.107c2.494 0 4.526-1.976 4.526-4.41V4.406C241.307 1.974 239.275 0 236.78 0z"
+                                fill="#0177b5" />
+                            <path
+                                d="M189.226 22.923h9.07v29.18h-9.07zm4.537-14.505a5.26 5.26 0 0 1 5.255 5.257 5.26 5.26 0 0 1-5.255 5.259 5.26 5.26 0 0 1-5.26-5.259 5.26 5.26 0 0 1 5.26-5.257m10.22 14.505h8.698V26.9h.12c1.2-2.294 4.17-4.713 8.58-4.713 9.184 0 10.88 6.044 10.88 13.9v16.005H223.2v-14.2c0-3.384-.062-7.737-4.713-7.737-4.72 0-5.443 3.686-5.443 7.492v14.435h-9.06v-29.18z"
+                                fill="#000" />
+                        </svg>
+                    </li>
+                </a>
+                <a href="https://github.com/dbabs629?tab=stars" target="_blank" rel="noreferrer noopener">
+                    <li class="nav-social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="-45 0 470 90">
+                            <path
+                                d="M69.37,41.69H39.11a1.41,1.41,0,0,0-1.42,1.42V57.9a1.42,1.42,0,0,0,1.42,1.42h11.8V77.71s-2.65.9-10,.9c-8.65,0-20.73-3.16-20.73-29.72S32.78,18.82,44.59,18.82c10.23,0,14.63,1.8,17.43,2.67a1.43,1.43,0,0,0,1.7-1.39L67.09,5.8a1.31,1.31,0,0,0-.54-1.1C65.41,3.88,58.47,0,40.93,0,20.73,0,0,8.6,0,49.92S23.73,97.41,43.73,97.41c16.55,0,26.6-7.08,26.6-7.08a1.23,1.23,0,0,0,.46-1.07V43.11A1.42,1.42,0,0,0,69.37,41.69Z" />
+                            <path
+                                d="M225.36,5A1.41,1.41,0,0,0,224,3.53h-17A1.41,1.41,0,0,0,205.5,5V37.89H178.94V5a1.41,1.41,0,0,0-1.41-1.42h-17A1.41,1.41,0,0,0,159.08,5V94.13a1.42,1.42,0,0,0,1.41,1.43h17a1.42,1.42,0,0,0,1.41-1.43V56H205.5l0,38.15a1.42,1.42,0,0,0,1.41,1.43H224a1.43,1.43,0,0,0,1.41-1.43Z" />
+                            <path d="M101.53,16.65a11,11,0,1,0-11,11.11A11,11,0,0,0,101.53,16.65Z" />
+                            <path
+                                d="M100.31,75.32V34.15a1.42,1.42,0,0,0-1.41-1.42h-17a1.63,1.63,0,0,0-1.47,1.59v59c0,1.74,1.08,2.25,2.48,2.25h15.3c1.68,0,2.09-.82,2.09-2.27Z" />
+                            <path
+                                d="M290.12,32.87H273.21a1.41,1.41,0,0,0-1.4,1.42V78a19.14,19.14,0,0,1-10.4,3.14c-6.1,0-7.72-2.76-7.72-8.74V34.29a1.41,1.41,0,0,0-1.4-1.42H235.12a1.41,1.41,0,0,0-1.4,1.42v41c0,17.74,9.88,22.08,23.48,22.08,11.15,0,20.15-6.17,20.15-6.17a34.29,34.29,0,0,0,.62,3.64,1.49,1.49,0,0,0,1.24.77l10.92,0a1.42,1.42,0,0,0,1.41-1.42V34.29A1.43,1.43,0,0,0,290.12,32.87Z" />
+                            <path
+                                d="M336.35,30.86a31.76,31.76,0,0,0-16.14,4.29V5a1.41,1.41,0,0,0-1.41-1.42H301.71A1.41,1.41,0,0,0,300.3,5V94.13a1.42,1.42,0,0,0,1.41,1.43h11.86a1.43,1.43,0,0,0,1.24-.76,28.4,28.4,0,0,0,.72-4.11s7,6.62,20.22,6.62c15.53,0,24.43-7.88,24.43-35.37S346,30.86,336.35,30.86Zm-6.67,50.25a20.31,20.31,0,0,1-9.85-2.84V50a22.54,22.54,0,0,1,8.74-2.84c6.09-.54,12,1.3,12,15.82C340.53,78.33,337.88,81.36,329.68,81.11Z" />
+                            <path
+                                d="M149.29,32.72H136.51l0-16.88c0-.64-.33-1-1.07-1H118c-.68,0-1,.3-1,.95V33.28s-8.73,2.11-9.32,2.28a1.41,1.41,0,0,0-1,1.36v11A1.42,1.42,0,0,0,108,49.31H117V75.69c0,19.6,13.75,21.52,23,21.52a38.91,38.91,0,0,0,10.15-1.67,1.32,1.32,0,0,0,.8-1.28V82.2a1.43,1.43,0,0,0-1.41-1.42c-.75,0-2.65.3-4.61.3-6.28,0-8.41-2.92-8.41-6.7V49.31h12.78a1.42,1.42,0,0,0,1.41-1.43V34.15A1.42,1.42,0,0,0,149.29,32.72Z" />
+                        </svg>
+                    </li>
+                </a>
+                <a href="https://codepen.io/collection/nGarpy" target="_blank" rel="noreferrer noopener">
+                    <li class="nav-social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="code-pen" width="30" height="25"
+                            viewBox="0 0 135 20" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z" />
+                        </svg>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <div class="content-container">
             <section class="section-container project-section" id="project-anchor">
-              <h2 class="section-heading">Projects</h2>
-              <article class="article-wrapper">
-                <h4 class="project-number">Project 1</h2>
-                <h3 class="project-heading">Rock Paper Scissors Game</h3>
-                <div class="project-item project-img-wrapper">
-                  <a href="http://getdaniel.me/rockpaperscissors/" target="_blank" rel="noreferrer noopener">
-                    <img class="project-img" src="assets/rps.png">
-                  </a>
-                </div>
-                <div class="project-item project-info">
-                  <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
-                  <ul class="project-link-list">
-                    <a href="http://getdaniel.me/rockpaperscissors/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
-                    <a href="https://github.com/dbabs629/rock-paper-scissors-lizard-spock" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
-                  </ul>
-                </div>
-              </article>
-              <article class="article-wrapper">
-                <h4 class="project-number">Project 2</h2>
-                <h3 class="project-heading">Clock + API's App</h3>
-                <div class="project-item project-img-wrapper">
-                  <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener">
-                    <img class="project-img" src="assets/clock.png" target="_blank" rel="noreferrer noopener">
-                  </a>
-                </div>
-                <div class="project-item project-info">
-                  <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
-                  <ul class="project-link-list">
-                    <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
-                    <a href="https://github.com/dbabs629/clock-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
-                  </ul>
-                </div>
-              </article>
-              <article class="article-wrapper">
-                <h4 class="project-number">Project 3</h2>
-                <h3 class="project-heading">Count Down Timer</h3>
-                <div class="project-item project-img-wrapper">
-                  <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener">
-                    <img class="project-img" src="assets/countdown.png">
-                  </a>
-                </div>
-                <div class="project-item project-info">
-                  <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
-                  <ul class="project-link-list">
-                    <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
-                    <a href="https://github.com/dbabs629/count-down-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
-                  </ul>
-                </div>
-              </article>
-              <article class="article-wrapper">
-                <h4 class="project-number">Project 4</h2>
-                <h3 class="project-heading">Ip Address Tracker</h3>
-                <div class="project-item project-img-wrapper">
-                  <a href="http://getdaniel.me/ip-address-tracker/" target="_blank" rel="noreferrer noopener">
-                    <img class="project-img" src="assets/ip-address-tracker.PNG">
-                  </a>
-                </div>
-                <div class="project-item project-info">
-                  <p class="project-description">The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</p>
-                  <ul class="project-link-list">
-                    <a href="http://getdaniel.me/ip-address-tracker/" target="_blank" rel="noreferrer noopener"><li class="project-link">Demo</li></a>
-                    <a href="https://github.com/dbabs629/ip-tracker-app" target="_blank" rel="noreferrer noopener"><li class="project-link">Code</li></a>
-                  </ul>
-                </div>
-              </article>
+                <h2 class="section-heading">Projects</h2>
+                <article class="article-wrapper">
+                    <h4 class="project-number">Project 1</h2>
+                        <h3 class="project-heading">Rock Paper Scissors Game</h3>
+                        <div class="project-item project-img-wrapper">
+                            <a href="http://getdaniel.me/rockpaperscissors/" target="_blank" rel="noreferrer noopener">
+                                <img class="project-img" src="assets/rps.png">
+                            </a>
+                        </div>
+                        <div class="project-item project-info">
+                            <p class="project-description">The replaced content is sized to maintain its aspect ratio
+                                while filling the element’s entire content box. If the object's aspect ratio does not
+                                match the aspect ratio of its box, then the object will be clipped to fit.</p>
+                            <ul class="project-link-list">
+                                <a href="http://getdaniel.me/rockpaperscissors/" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link demo-link">Demo</li>
+                                </a>
+                                <a href="https://github.com/dbabs629/rock-paper-scissors-lizard-spock" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link code-link">Code</li>
+                                </a>
+                            </ul>
+                        </div>
+                </article>
+                <article class="article-wrapper">
+                    <h4 class="project-number">Project 2</h2>
+                        <h3 class="project-heading">Clock + API's App</h3>
+                        <div class="project-item project-img-wrapper">
+                            <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener">
+                                <img class="project-img" src="assets/clock.png" target="_blank"
+                                    rel="noreferrer noopener">
+                            </a>
+                        </div>
+                        <div class="project-item project-info">
+                            <p class="project-description">The replaced content is sized to maintain its aspect ratio
+                                while filling the element’s entire content box. If the object's aspect ratio does not
+                                match the aspect ratio of its box, then the object will be clipped to fit.</p>
+                            <ul class="project-link-list">
+                                <a href="http://getdaniel.me/clock-app/" target="_blank" rel="noreferrer noopener">
+                                    <li class="project-link demo-link">Demo</li>
+                                </a>
+                                <a href="https://github.com/dbabs629/clock-app" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link code-link">Code</li>
+                                </a>
+                            </ul>
+                        </div>
+                </article>
+                <article class="article-wrapper">
+                    <h4 class="project-number">Project 3</h2>
+                        <h3 class="project-heading">Count Down Timer</h3>
+                        <div class="project-item project-img-wrapper">
+                            <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener">
+                                <img class="project-img" src="assets/countdown.png">
+                            </a>
+                        </div>
+                        <div class="project-item project-info">
+                            <p class="project-description">The replaced content is sized to maintain its aspect ratio
+                                while filling the element’s entire content box. If the object's aspect ratio does not
+                                match the aspect ratio of its box, then the object will be clipped to fit.</p>
+                            <ul class="project-link-list">
+                                <a href="http://getdaniel.me/count-down-app/" target="_blank" rel="noreferrer noopener">
+                                    <li class="project-link demo-link">Demo</li>
+                                </a>
+                                <a href="https://github.com/dbabs629/count-down-app" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link code-link">Code</li>
+                                </a>
+                            </ul>
+                        </div>
+                </article>
+                <article class="article-wrapper">
+                    <h4 class="project-number">Project 4</h2>
+                        <h3 class="project-heading">Ip Address Tracker</h3>
+                        <div class="project-item project-img-wrapper">
+                            <a href="http://getdaniel.me/ip-address-tracker/" target="_blank" rel="noreferrer noopener">
+                                <img class="project-img" src="assets/ip-address-tracker.PNG">
+                            </a>
+                        </div>
+                        <div class="project-item project-info">
+                            <p class="project-description">The replaced content is sized to maintain its aspect ratio
+                                while filling the element’s entire content box. If the object's aspect ratio does not
+                                match the aspect ratio of its box, then the object will be clipped to fit.</p>
+                            <ul class="project-link-list">
+                                <a href="http://getdaniel.me/ip-address-tracker/" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link demo-link">Demo</li>
+                                </a>
+                                <a href="https://github.com/dbabs629/ip-tracker-app" target="_blank"
+                                    rel="noreferrer noopener">
+                                    <li class="project-link code-link">Code</li>
+                                </a>
+                            </ul>
+                        </div>
+                </article>
             </section>
             <section class="section-container about-section" id="about-anchor">
-              <h2 class="section-heading">About</h2>
-              <h3 class="about-heading">What I can tell you about me</h3>
-              <p class="about-content">I graduated from the three year Web Design and Interactive Media advanced Diploma Program at Humber College in 2020. While I attended the program, I learned front-end technologies, design and ux principles as well as how to utilize databases for my projects. I am constantly updating my knowledge base, I am currently learning the MERN stack (MongoDB, Express.js, React.js & Node.js) on LinkedIn Learning. I am a dedicated problem solver and a good team player who will help & collaborate to solve difficult tasks. I am looking to join a great team and continue to grow as a front-end developer.</p>
-              <div class="about-img-wrapper">
-                <img class=about-img src="">
-              </div>
+                <h2 class="section-heading">About</h2>
+                <h3 class="about-heading">What I can tell you about me</h3>
+                <p class="about-content">I graduated from the three year Web Design and Interactive Media advanced
+                    Diploma Program at Humber College in 2020. While I attended the program, I learned front-end
+                    technologies, design and ux principles as well as how to utilize databases for my projects. I am
+                    constantly updating my knowledge base, I am currently learning the MERN stack (MongoDB, Express.js,
+                    React.js & Node.js) on LinkedIn Learning. I am a dedicated problem solver and a good team player who
+                    will help & collaborate to solve difficult tasks. I am looking to join a great team and continue to
+                    grow as a front-end developer.</p>
+                <h3 class="skill-header">Skills</h3>
+                <ul class="skillList">
+                    <li class='skillItem adv'>
+                        <!-- PNG Retrieved from https://cdn.worldvectorlogo.com/logos/javascript-1.svg -->
+                        <!-- <img class="jsLogo itemImg" src="assets/1x/Asset 3.png" width="80"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" id="svg4525" class="itemImg" viewBox="-50 -50 350 350">
+                            <style>
+                                .st0 {
+                                    fill: #d4b830
+                                }
+
+                                .st1,
+                                .st2 {
+                                    opacity: .986;
+                                    fill: #ebebeb;
+                                    fill-opacity: 0;
+                                    enable-background: new
+                                }
+
+                                .st2 {
+                                    fill-opacity: .9216
+                                }
+
+                                .st3 {
+                                    fill: #fdd83c
+                                }
+                            </style>
+                            <g id="g5193" transform="translate(4.988 -113.385)">
+                                <path id="path5113" class="st0"
+                                    d="M18.8 375.4L-5 113.4l256.4.1-23.6 261.7L123 404.8 18.8 375.4zm189.7-14.3l19.9-224.4h-105l.8 247.5 84.3-23.1zm-94.9-191.5H88.1l-.3 134.3-49.5-13.5.1 30.7 75.2 20.3V169.6z" />
+                                <path id="path5159" class="st1"
+                                    d="M105.2 338.9c-3.3-1-19.6-5.4-36.2-9.9l-30.1-8.1v-15.1c0-14.8 0-15.1 1.5-14.6.8.3 11.8 3.3 24.4 6.8l22.9 6.3.2-67 .2-67h25v85.2c0 67.7-.2 85.2-.9 85.2-.5-.1-3.7-.9-7-1.8z" />
+                                <path id="path5157" class="st2"
+                                    d="M38.4 321.1l-.1-30.7s31.6 8.9 49.5 13.5l.3-134.2h25.5v171.7l-75.2-20.3z" />
+                                <path id="path5117" class="st3"
+                                    d="M123.4 136.6h105L208.5 361l-85.1 23.1V136.6zm79.7 186.8l6.9-83.9-51 5.7v-44.8l54.4-.2 2.2-30.6-82.1.4 1.1 111.4 49.6-8.5-.7 24.8-50 13.3.5 30.4 69.1-18z" />
+                            </g>
+                        </svg>
+                        <p>JavaScript</p>
+                    </li>
+                    <!-- Image retrieved from REACTJS.com -->
+                    <li class='skillItem adv'>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Layer_2_1_" x="0px" y="0px" viewBox="150 50 550 550" xml:space="preserve">
+                            <g>
+                                <path fill="#61DAFB"
+                                    d="M666.3,296.5c0-32.5-40.7-63.3-103.1-82.4c14.4-63.6,8-114.2-20.2-130.4c-6.5-3.8-14.1-5.6-22.4-5.6v22.3   c4.6,0,8.3,0.9,11.4,2.6c13.6,7.8,19.5,37.5,14.9,75.7c-1.1,9.4-2.9,19.3-5.1,29.4c-19.6-4.8-41-8.5-63.5-10.9   c-13.5-18.5-27.5-35.3-41.6-50c32.6-30.3,63.2-46.9,84-46.9l0-22.3c0,0,0,0,0,0c-27.5,0-63.5,19.6-99.9,53.6   c-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7,0,51.4,16.5,84,46.6c-14,14.7-28,31.4-41.3,49.9c-22.6,2.4-44,6.1-63.6,11   c-2.3-10-4-19.7-5.2-29c-4.7-38.2,1.1-67.9,14.6-75.8c3-1.8,6.9-2.6,11.5-2.6l0-22.3c0,0,0,0,0,0c-8.4,0-16,1.8-22.6,5.6   c-28.1,16.2-34.4,66.7-19.9,130.1c-62.2,19.2-102.7,49.9-102.7,82.3c0,32.5,40.7,63.3,103.1,82.4c-14.4,63.6-8,114.2,20.2,130.4   c6.5,3.8,14.1,5.6,22.5,5.6c27.5,0,63.5-19.6,99.9-53.6c36.4,33.8,72.4,53.2,99.9,53.2c8.4,0,16-1.8,22.6-5.6   c28.1-16.2,34.4-66.7,19.9-130.1C625.8,359.7,666.3,328.9,666.3,296.5z M536.1,229.8c-3.7,12.9-8.3,26.2-13.5,39.5   c-4.1-8-8.4-16-13.1-24c-4.6-8-9.5-15.8-14.4-23.4C509.3,224,523,226.6,536.1,229.8z M490.3,336.3c-7.8,13.5-15.8,26.3-24.1,38.2   c-14.9,1.3-30,2-45.2,2c-15.1,0-30.2-0.7-45-1.9c-8.3-11.9-16.4-24.6-24.2-38c-7.6-13.1-14.5-26.4-20.8-39.8   c6.2-13.4,13.2-26.8,20.7-39.9c7.8-13.5,15.8-26.3,24.1-38.2c14.9-1.3,30-2,45.2-2c15.1,0,30.2,0.7,45,1.9   c8.3,11.9,16.4,24.6,24.2,38c7.6,13.1,14.5,26.4,20.8,39.8C504.7,309.8,497.8,323.2,490.3,336.3z M522.6,323.3   c5.4,13.4,10,26.8,13.8,39.8c-13.1,3.2-26.9,5.9-41.2,8c4.9-7.7,9.8-15.6,14.4-23.7C514.2,339.4,518.5,331.3,522.6,323.3z    M421.2,430c-9.3-9.6-18.6-20.3-27.8-32c9,0.4,18.2,0.7,27.5,0.7c9.4,0,18.7-0.2,27.8-0.7C439.7,409.7,430.4,420.4,421.2,430z    M346.8,371.1c-14.2-2.1-27.9-4.7-41-7.9c3.7-12.9,8.3-26.2,13.5-39.5c4.1,8,8.4,16,13.1,24C337.1,355.7,341.9,363.5,346.8,371.1z    M420.7,163c9.3,9.6,18.6,20.3,27.8,32c-9-0.4-18.2-0.7-27.5-0.7c-9.4,0-18.7,0.2-27.8,0.7C402.2,183.3,411.5,172.6,420.7,163z    M346.7,221.9c-4.9,7.7-9.8,15.6-14.4,23.7c-4.6,8-8.9,16-13,24c-5.4-13.4-10-26.8-13.8-39.8C318.6,226.7,332.4,224,346.7,221.9z    M256.2,347.1c-35.4-15.1-58.3-34.9-58.3-50.6c0-15.7,22.9-35.6,58.3-50.6c8.6-3.7,18-7,27.7-10.1c5.7,19.6,13.2,40,22.5,60.9   c-9.2,20.8-16.6,41.1-22.2,60.6C274.3,354.2,264.9,350.8,256.2,347.1z M310,490c-13.6-7.8-19.5-37.5-14.9-75.7   c1.1-9.4,2.9-19.3,5.1-29.4c19.6,4.8,41,8.5,63.5,10.9c13.5,18.5,27.5,35.3,41.6,50c-32.6,30.3-63.2,46.9-84,46.9   C316.8,492.6,313,491.7,310,490z M547.2,413.8c4.7,38.2-1.1,67.9-14.6,75.8c-3,1.8-6.9,2.6-11.5,2.6c-20.7,0-51.4-16.5-84-46.6   c14-14.7,28-31.4,41.3-49.9c22.6-2.4,44-6.1,63.6-11C544.3,394.8,546.1,404.5,547.2,413.8z M585.7,347.1c-8.6,3.7-18,7-27.7,10.1   c-5.7-19.6-13.2-40-22.5-60.9c9.2-20.8,16.6-41.1,22.2-60.6c9.9,3.1,19.3,6.5,28.1,10.2c35.4,15.1,58.3,34.9,58.3,50.6   C644,312.2,621.1,332.1,585.7,347.1z" />
+                                <polygon fill="#61DAFB" points="320.8,78.4 320.8,78.4 320.8,78.4  " />
+                                <circle fill="#61DAFB" cx="420.9" cy="296.5" r="45.7" />
+                                <polygon fill="#61DAFB" points="520.5,78.1 520.5,78.1 520.5,78.1  " />
+                            </g>
+                        </svg>
+                        <p>React</p>
+                    </li>
+                    <li class='skillItem adv'>
+                        <!-- SVG Retrieved from https://www.w3.org/html/logo/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 0 512 512">
+                            <title>HTML5 Logo</title>
+                            <polygon fill="#E44D26"
+                                points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512 			" />
+                            <polygon fill="#F16529"
+                                points="256,480.523 376.03,447.246 404.27,130.894 256,130.894 			" />
+                            <polygon fill="#EBEBEB"
+                                points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
+                            <polygon fill="#EBEBEB"
+                                points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
+                            <polygon fill="#FFFFFF"
+                                points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
+                            <polygon fill="#FFFFFF"
+                                points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
+                        </svg>
+                        <p>HTML5</p>
+                    </li>
+                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/css3.svg -->
+                    <li class='skillItem adv'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 0 512 512">
+                            <path d="M0 0h538.584v538.583H0V0z" fill="none" />
+                            <path d="M405.5 467.454L269.29 504.13l-136.212-36.676-31.432-340.525h335.29L405.5 467.454z"
+                                fill="#2062af" />
+                            <path d="M269.289 154.511v320.367l.308.084 110.229-29.682 25.443-290.769h-135.98z"
+                                fill="#3c9cd7" />
+                            <path
+                                d="M269.168 239.656l-97.49 40.602 3.233 40.199 94.257-40.301 100.265-42.868 4.157-41.122-104.422 43.49z"
+                                fill="#fff" />
+                            <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-825.508" y1="1338.301"
+                                x2="-825.508" y2="1419.102" gradientTransform="matrix(1 0 0 -1 1045.93 1658.759)">
+                                <stop offset=".387" stop-color="#d1d3d4" stop-opacity="0" />
+                                <stop offset="1" stop-color="#d1d3d4" />
+                            </linearGradient>
+                            <path d="M171.677 280.258l3.233 40.199 94.257-40.301v-40.5l-97.49 40.602z" fill="url(#a)" />
+                            <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="-724.552" y1="1378.602"
+                                x2="-724.552" y2="1462.591" gradientTransform="matrix(1 0 0 -1 1045.93 1658.759)">
+                                <stop offset=".387" stop-color="#d1d3d4" stop-opacity="0" />
+                                <stop offset="1" stop-color="#d1d3d4" />
+                            </linearGradient>
+                            <path d="M373.59 196.167l-104.422 43.489v40.5l100.265-42.868 4.157-41.121z"
+                                fill="url(#b)" />
+                            <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="-874.103" y1="1302.263"
+                                x2="-680.039" y2="1302.263" gradientTransform="matrix(1 0 0 -1 1045.93 1658.759)">
+                                <stop offset="0" stop-color="#e8e7e5" />
+                                <stop offset="1" stop-color="#fff" />
+                            </linearGradient>
+                            <path
+                                d="M171.827 280.258l3.234 40.199 144.625.461-3.235 53.598-47.59 13.398-45.748-11.551-2.772-33.268h-42.508l5.545 64.225 85.945 25.412 85.479-24.951 11.09-127.523H171.827z"
+                                fill="url(#c)" />
+                            <path
+                                d="M269.168 280.258h-97.49l3.233 40.199 94.257.301v-40.5zm0 107.528l-.462.129-45.742-11.551-2.772-33.268h-42.507l5.544 64.225 85.939 25.412v-44.947z"
+                                opacity=".05" />
+                            <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="-883.032" y1="1442.031"
+                                x2="-672.341" y2="1442.031" gradientTransform="matrix(1 0 0 -1 1045.93 1658.759)">
+                                <stop offset="0" stop-color="#e8e7e5" />
+                                <stop offset="1" stop-color="#fff" />
+                            </linearGradient>
+                            <path d="M162.898 196.167H373.59l-4.157 41.122H167.98l-5.082-41.122z" fill="url(#d)" />
+                            <path d="M269.168 196.167h-106.27l5.082 41.122h101.188v-41.122z" opacity=".05" />
+                        </svg>
+                        <p>CSS3</p>
+                    </li>
+                </ul>
+                <ul class="skillList">
+                    <!-- SVG retrieved from https://getbootstrap.com/ -->
+                    <li class="skillItem adv">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="itemImg" viewBox="0 -100 1000 1000" focusable="false" role="img">
+                            <title>Bootstrap</title>
+                            <defs>
+                                <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#5c24ae"></stop>
+                                    <stop offset="100%" stop-color="#30135a"></stop>
+                                </linearGradient>
+                                <path id="b"
+                                    d="M355.967 242.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z">
+                                </path>
+                                <filter id="a" width="108%" height="112%" x="-4%" y="-4.3%"
+                                    filterUnits="objectBoundingBox">
+                                    <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10">
+                                    </feGaussianBlur>
+                                    <feColorMatrix in="shadowBlurOuter1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                </filter>
+                                <linearGradient id="f" x1="50%" x2="50%" y1="-17.303%" y2="100%">
+                                    <stop offset="0%" stop-color="#7331d4"></stop>
+                                    <stop offset="100%" stop-color="#461b84"></stop>
+                                </linearGradient>
+                                <path id="e"
+                                    d="M355.967 132.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z">
+                                </path>
+                                <filter id="d" width="108%" height="112%" x="-4%" y="-4.3%"
+                                    filterUnits="objectBoundingBox">
+                                    <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10">
+                                    </feGaussianBlur>
+                                    <feColorMatrix in="shadowBlurOuter1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                </filter>
+                                <linearGradient id="i" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#905bdd"></stop>
+                                    <stop offset="100%" stop-color="#5521a0"></stop>
+                                </linearGradient>
+                                <path id="h"
+                                    d="M355.967 22.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z">
+                                </path>
+                                <filter id="g" width="108%" height="112%" x="-4%" y="-4.3%"
+                                    filterUnits="objectBoundingBox">
+                                    <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10">
+                                    </feGaussianBlur>
+                                    <feColorMatrix in="shadowBlurOuter1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                </filter>
+                            </defs>
+                            <g fill="none">
+                                <g transform="translate(75 23)">
+                                    <use fill="#000" filter="url(#a)" xlink:href="#b"></use>
+                                    <use fill="url(#c)" xlink:href="#b"></use>
+                                </g>
+                                <g transform="translate(75 23)">
+                                    <use fill="#000" filter="url(#d)" xlink:href="#e"></use>
+                                    <use fill="url(#f)" xlink:href="#e"></use>
+                                </g>
+                                <g transform="translate(75 23)">
+                                    <use fill="#000" filter="url(#g)" xlink:href="#h"></use>
+                                    <use fill="url(#i)" xlink:href="#h"></use>
+                                </g>
+                                <path fill="#fff"
+                                    d="M558.273 447.667L308.036 279.5l97.982-65.847c42.83-28.784 96.789-31.483 134.245-6.311 26.044 17.502 31.214 46.615 11.444 65.724l1.389.934c38.324-19.932 84.107-18.527 117.396 3.845 44.046 29.6 38.671 68.419-14.561 104.193l-97.658 65.629zM447.112 331.01l49.942-33.562c36.935-24.822 42.31-48.249 15.224-66.451-24.798-16.665-55.49-14.453-85.851 5.95l-59.641 40.081 80.326 53.982zm176.532 35.663c37.63-25.289 42.136-48.832 13.203-68.276-28.932-19.444-64.163-15.614-104.042 11.186l-58.789 39.508 87.92 59.084 61.708-41.502z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p>Bootstrap</p>
+                    </li>
+                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/sass-1.svg -->
+                    <li class="skillItem adv">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 -50 512 512">
+                            <path fill="#CF649A"
+                                d="M440.6 220.6c-17.9.101-33.4 4.4-46.4 10.801-4.8-9.5-9.6-17.801-10.399-24-.9-7.2-2-11.601-.9-20.2C384 178.6 389 166.4 389 165.4c-.101-.9-1.101-5.3-11.4-5.4s-19.2 2-20.2 4.7-3 8.9-4.3 15.3c-1.8 9.4-20.6 42.7-31.3 60.2-3.5-6.8-6.5-12.8-7.101-17.601-.899-7.199-2-11.6-.899-20.199 1.1-8.601 6.1-20.8 6.1-21.8-.1-.9-1.1-5.3-11.399-5.4-10.301-.1-19.2 2-20.2 4.7s-2.1 9.1-4.3 15.3C281.9 201.4 256.9 257 250.4 271.5c-3.3 7.4-6.199 13.3-8.3 17.3-2.1 4-.1.3-.3.7-1.8 3.4-2.8 5.3-2.8 5.3v.101c-1.4 2.5-2.9 4.899-3.601 4.899-.5 0-1.5-6.7.2-15.899 3.7-19.301 12.7-49.4 12.601-50.5 0-.5 1.699-5.801-5.801-8.5-7.3-2.7-9.899 1.8-10.5 1.8-.6 0-1.1 1.6-1.1 1.6s8.1-33.899-15.5-33.899c-14.8 0-35.2 16.1-45.3 30.8-6.4 3.5-20 10.899-34.4 18.8-5.5 3-11.2 6.2-16.6 9.1L117.9 251.9c-28.6-30.5-81.5-52.1-79.3-93.1.8-14.9 6-54.2 101.601-101.8 78.3-39 141-28.3 151.899-4.5 15.5 34-33.5 97.2-114.899 106.3-31 3.5-47.301-8.5-51.4-13-4.3-4.7-4.9-4.9-6.5-4-2.6 1.4-1 5.6 0 8.1 2.4 6.3 12.4 17.5 29.4 23.1 14.899 4.9 51.3 7.6 95.3-9.4 49.3-19.1 87.8-72.1 76.5-116.4-11.5-45.1-86.3-59.9-157-34.8C121.4 27.4 75.8 50.8 43 81.5 4 117.9-2.2 149.7.4 162.9c9.101 47.1 74 77.8 100 100.5-1.3.699-2.5 1.399-3.6 2-13 6.399-62.5 32.3-74.9 59.699-14 31 2.2 53.301 13 56.301 33.4 9.3 67.6-7.4 86.1-34.9 18.399-27.5 16.2-63.2 7.7-79.5l-.301-.6 10.2-6c6.601-3.9 13.101-7.5 18.8-10.601-3.199 8.7-5.5 19-6.699 34-1.4 17.601 5.8 40.4 15.3 49.4 4.2 3.899 9.2 4 12.3 4 11 0 16-9.101 21.5-20 6.8-13.3 12.8-28.7 12.8-28.7s-7.5 41.7 13 41.7c7.5 0 15-9.7 18.4-14.7v.1s.2-.3.6-1a36.13 36.13 0 0 0 1.2-1.899v-.2c3-5.2 9.7-17.1 19.7-36.8 12.899-25.4 25.3-57.2 25.3-57.2s1.2 7.8 4.9 20.6c2.199 7.601 6.999 15.9 10.699 24-3 4.2-4.8 6.601-4.8 6.601l.1.1c-2.399 3.2-5.1 6.601-7.899 10-10.2 12.2-22.4 26.101-24 30.101-1.9 4.699-1.5 8.199 2.2 11 2.7 2 7.5 2.399 12.6 2 9.2-.601 15.6-2.9 18.8-4.301 5-1.8 10.7-4.5 16.2-8.5 10-7.399 16.1-17.899 15.5-31.899-.3-7.7-2.8-15.3-5.9-22.5.9-1.3 1.801-2.601 2.7-4 15.8-23.101 28-48.5 28-48.5s1.2 7.8 4.9 20.6c1.899 6.5 5.7 13.601 9.1 20.601-14.8 12.1-24.1 26.1-27.3 35.3-5.9 17-1.3 24.7 7.4 26.5 3.899.8 9.5-1 13.699-2.8 5.2-1.7 11.5-4.601 17.301-8.9 10-7.4 19.6-17.7 19.1-31.6-.3-6.4-2-12.7-4.3-18.7 12.6-5.2 28.899-8.2 49.6-5.7 44.5 5.2 53.3 33 51.601 44.6-1.7 11.601-11 18-14.101 20-3.1 1.9-4.1 2.601-3.8 4 .4 2.101 1.8 2 4.5 1.601 3.7-.601 23.4-9.5 24.2-30.899 1.2-27.504-24.9-57.504-71.2-57.205zM97.4 336.3c-14.7 16.1-35.4 22.2-44.2 17-9.5-5.5-5.801-29.2 12.3-46.3 11-10.4 25.3-20 34.7-25.9 2.1-1.3 5.3-3.199 9.1-5.5.6-.399 1-.6 1-.6.7-.4 1.5-.9 2.3-1.4 6.7 24.4.3 45.8-15.2 62.7zm107.5-73.1c-5.1 12.5-15.9 44.6-22.4 42.8-5.601-1.5-9-25.8-1.101-49.8 4-12.101 12.5-26.5 17.5-32.101 8.101-9 16.9-12 19.101-8.3 2.6 4.801-9.9 39.601-13.1 47.401zm88.7 42.4c-2.2 1.101-4.2 1.9-5.1 1.301-.7-.4.899-1.9.899-1.9s11.1-11.9 15.5-17.4c2.5-3.199 5.5-6.899 8.7-11.1v1.2C313.6 292.1 299.8 301.7 293.6 305.6zm68.399-15.6c-1.6-1.2-1.399-4.9 4-16.5 2.101-4.6 6.9-12.3 15.2-19.6 1 3 1.601 5.899 1.5 8.6-.099 18-12.899 24.7-20.7 27.5z" />
+                        </svg>
+                        <p>Sass</p>
+                    </li>
+                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/photoshop-cc.svg -->
+                    <li class="skillItem adv">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 240 234" style="enable-background:new 0 0 240 234;" xml:space="preserve">
+                            <style type="text/css">
+                                .st4{fill:#001E36;}
+                                .st5{fill:#31A8FF;}
+                            </style>
+                            <g id="Layer_2_1_">
+                                <g id="Surfaces">
+                                    <g id="Photo_Surface">
+                                        <g id="Outline_no_shadow">
+                                            <path class="st4" d="M42.5,0h155C221,0,240,19,240,42.5v149c0,23.5-19,42.5-42.5,42.5h-155C19,234,0,215,0,191.5v-149      C0,19,19,0,42.5,0z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="Outlined_Mnemonics_Logos">
+                                    <g id="Ps">
+                                        <path class="st5" d="M54,164.1V61.2c0-0.7,0.3-1.1,1-1.1c1.7,0,3.3,0,5.6-0.1c2.4-0.1,4.9-0.1,7.6-0.2c2.7-0.1,5.6-0.1,8.7-0.2     c3.1-0.1,6.1-0.1,9.1-0.1c8.2,0,15,1,20.6,3.1c5,1.7,9.6,4.5,13.4,8.2c3.2,3.2,5.7,7.1,7.3,11.4c1.5,4.2,2.3,8.5,2.3,13     c0,8.6-2,15.7-6,21.3c-4,5.6-9.6,9.8-16.1,12.2c-6.8,2.5-14.3,3.4-22.5,3.4c-2.4,0-4,0-5-0.1c-1-0.1-2.4-0.1-4.3-0.1v32.1     c0.1,0.7-0.4,1.3-1.1,1.4c-0.1,0-0.2,0-0.4,0H55.2C54.4,165.4,54,165,54,164.1z M75.8,79.4V113c1.4,0.1,2.7,0.2,3.9,0.2H85     c3.9,0,7.8-0.6,11.5-1.8c3.2-0.9,6-2.8,8.2-5.3c2.1-2.5,3.1-5.9,3.1-10.3c0.1-3.1-0.7-6.2-2.3-8.9c-1.7-2.6-4.1-4.6-7-5.7     c-3.7-1.5-7.7-2.1-11.8-2c-2.6,0-4.9,0-6.8,0.1C77.9,79.2,76.5,79.3,75.8,79.4L75.8,79.4z"/>
+                                        <path class="st5" d="M192,106.9c-3-1.6-6.2-2.7-9.6-3.4c-3.7-0.8-7.4-1.3-11.2-1.3c-2-0.1-4.1,0.2-6,0.7c-1.3,0.3-2.4,1-3.1,2     c-0.5,0.8-0.8,1.8-0.8,2.7c0,0.9,0.4,1.8,1,2.6c0.9,1.1,2.1,2,3.4,2.7c2.3,1.2,4.7,2.3,7.1,3.3c5.4,1.8,10.6,4.3,15.4,7.3     c3.3,2.1,6,4.9,7.9,8.3c1.6,3.2,2.4,6.7,2.3,10.3c0.1,4.7-1.3,9.4-3.9,13.3c-2.8,4-6.7,7.1-11.2,8.9c-4.9,2.1-10.9,3.2-18.1,3.2     c-4.6,0-9.1-0.4-13.6-1.3c-3.5-0.6-7-1.7-10.2-3.2c-0.7-0.4-1.2-1.1-1.1-1.9v-17.4c0-0.3,0.1-0.7,0.4-0.9     c0.3-0.2,0.6-0.1,0.9,0.1c3.9,2.3,8,3.9,12.4,4.9c3.8,1,7.8,1.5,11.8,1.5c3.8,0,6.5-0.5,8.3-1.4c1.6-0.7,2.7-2.4,2.7-4.2     c0-1.4-0.8-2.7-2.4-4c-1.6-1.3-4.9-2.8-9.8-4.7c-5.1-1.8-9.8-4.2-14.2-7.2c-3.1-2.2-5.7-5.1-7.6-8.5c-1.6-3.2-2.4-6.7-2.3-10.2     c0-4.3,1.2-8.4,3.4-12.1c2.5-4,6.2-7.2,10.5-9.2c4.7-2.4,10.6-3.5,17.7-3.5c4.1,0,8.3,0.3,12.4,0.9c3,0.4,5.9,1.2,8.6,2.3     c0.4,0.1,0.8,0.5,1,0.9c0.1,0.4,0.2,0.8,0.2,1.2v16.3c0,0.4-0.2,0.8-0.5,1C192.9,107.1,192.4,107.1,192,106.9z"/>
+                                    </g>
+                                </g>
+                            </g>
+                            </svg>
+                        <p>Photoshop</p>
+                    </li>
+                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg -->
+                    <li class="skillItem adv">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            class="itemImg" x="0px" y="0px" viewBox="0 0 2800 2800" xml:space="preserve">
+                            <style type="text/css">
+                                .st5 {
+                                    fill: #FF26BE;
+                                }
+
+                                .st6 {
+                                    fill: #2E001F;
+                                }
+
+                                .st7 {
+                                    fill: #FFD9F2;
+                                }
+                            </style>
+                            <path class="st5"
+                                d="M2057.3,2437.5H442.7C197.9,2437.5,0,2239.6,0,1994.8V442.7C0,197.9,197.9,0,442.7,0h1614.6  C2302.1,0,2500,197.9,2500,442.7v1552.1C2500,2239.6,2302.1,2437.5,2057.3,2437.5z" />
+                            <path class="st6"
+                                d="M2017.7,2333.3H482.3c-208.3,0-378.1-169.8-378.1-378.1V482.3c0-208.3,169.8-378.1,378.1-378.1h1534.4  c209.4,0,378.1,169.8,378.1,378.1v1471.9C2395.8,2163.5,2226,2333.3,2017.7,2333.3L2017.7,2333.3z" />
+                            <path class="st7"
+                                d="M988.5,1140.6l291.7,560.4c5.2,8.3,2.1,16.7-6.3,16.7h-181.3c-11.5,0-16.7-3.1-21.9-13.5  c-66.7-137.5-134.4-275-204.2-422.9h-2.1c-62.5,139.6-131.3,286.5-197.9,424c-5.2,8.3-10.4,11.5-18.8,11.5H476  c-10.4,0-11.5-8.3-6.2-14.6l285.4-543.8l-276-550c-6.3-8.3,0-14.6,6.2-14.6h179.2c10.4,0,14.6,2.1,18.7,11.5  c65.6,137.5,132.3,279.2,194.8,417.7h2.1c60.4-137.5,127.1-280.2,191.7-416.7c5.2-8.3,8.3-13.5,18.8-13.5h167.7  c8.3,0,11.5,6.3,6.3,14.6L988.5,1140.6z M1331.3,1310.4c0-242.7,161.5-432.3,417.7-432.3c21.9,0,33.3,0,54.2,2.1v-276  c0-6.3,5.2-10.4,10.4-10.4h164.6c8.3,0,10.4,3.1,10.4,8.3v956.3c0,28.1,0,63.5,5.2,102.1c0,6.3-2.1,8.3-8.3,11.5  c-87.5,41.7-179.2,60.4-266.7,60.4C1492.7,1733.3,1331.2,1593.8,1331.3,1310.4L1331.3,1310.4z M1803.1,1043.8  c-14.6-6.3-35.4-10.4-60.4-10.4c-131.3,0-222.9,101-222.9,268.8c0,191.7,93.8,268.8,211.5,268.8c25,0,52.1-3.1,71.9-11.5V1043.8z" />
+                        </svg>
+                        <p>XD</p>
+                    </li>
+                </ul>
+                <ul class="skillList">
+                    <!-- SVG retrieved https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc.svg -->
+                    <li class="skillItem adv">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 130.746 625 625">
+                            <path
+                                d="M24.803 155.549h545.674v530.792H24.803V155.549zM0 711.145h595.28V130.746H0v580.399zm389.908-373.539c0-1.984.744-2.977 2.977-2.977h38.941c1.983 0 2.976.744 2.976 2.977v195.699c0 1.983-.496 2.976-2.976 2.976h-38.445c-2.48 0-3.225-1.24-3.225-3.224V337.606h-.248zm-2.728-56.304c0-15.874 11.161-25.299 25.3-25.299 15.13 0 25.299 10.169 25.299 25.299 0 16.37-10.665 25.299-25.795 25.299-14.387.001-24.804-8.929-24.804-25.299zM275.565 419.209c-6.944-27.532-23.314-87.556-29.516-116.576h-.496c-5.209 29.02-18.354 78.13-28.771 116.576h58.783zm-68.953 40.182l-19.595 74.41c-.496 1.983-1.24 2.479-3.72 2.479h-36.461c-2.48 0-2.977-.744-2.48-3.72l70.441-246.546c1.24-4.464 1.984-8.433 2.48-20.586 0-1.736.744-2.48 1.984-2.48h52.087c1.736 0 2.48.496 2.977 2.48l78.874 267.628c.496 1.983 0 3.224-1.984 3.224h-41.174c-1.984 0-3.225-.496-3.72-2.231l-20.339-74.658h-79.37z"
+                                fill="#ff7f18" />
+                        </svg>
+                        <p>Ilustrator</p>
+                    </li>
+                    <!-- SVG retrieved from https://nodejs.org/en/about/resources/ -->
+                    <li class='skillItem int'>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1"
+                            class="itemImg" data-name="Layer 1" viewBox="-10 -140 450 450">
+                            <defs>
+                                <style>
+                                    .cls-1,
+                                    .cls-5 {
+                                        fill: url(#linear-gradient);
+                                    }
+
+                                    .cls-1 {
+                                        clip-rule: evenodd;
+                                    }
+
+                                    .cls-2,
+                                    .cls-4 {
+                                        fill: #679e63;
+                                    }
+
+                                    .cls-3 {
+                                        fill: #333;
+                                    }
+
+                                    .cls-3,
+                                    .cls-4,
+                                    .cls-5 {
+                                        fill-rule: evenodd;
+                                    }
+
+                                    .cls-6 {
+                                        clip-path: url(#clip-path);
+                                    }
+
+                                    .cls-7 {
+                                        fill: none;
+                                    }
+
+                                    .cls-8 {
+                                        fill: url(#linear-gradient-3);
+                                    }
+
+                                    .cls-9 {
+                                        fill: url(#linear-gradient-4);
+                                    }
+
+                                    .cls-10 {
+                                        fill: url(#linear-gradient-5);
+                                    }
+
+                                    .cls-11 {
+                                        fill: url(#linear-gradient-6);
+                                    }
+
+                                    .cls-12 {
+                                        fill: url(#linear-gradient-7);
+                                    }
+
+                                    .cls-13 {
+                                        fill: url(#linear-gradient-8);
+                                    }
+                                </style>
+                                <linearGradient id="linear-gradient" x1="258.7" y1="244.71" x2="220.64" y2="322.37"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#3f873f" />
+                                    <stop offset="0.33" stop-color="#3f8b3d" />
+                                    <stop offset="0.64" stop-color="#3e9637" />
+                                    <stop offset="0.93" stop-color="#3da92e" />
+                                    <stop offset="1" stop-color="#3dae2b" />
+                                </linearGradient>
+                                <clipPath id="clip-path" transform="translate(-78.31 -164.02)">
+                                    <path class="cls-1"
+                                        d="M244.12,226.61a5.09,5.09,0,0,0-5.09,0L196.9,250.92a5.09,5.09,0,0,0-2.55,4.41V304a5.08,5.08,0,0,0,2.55,4.4L239,332.74a5.09,5.09,0,0,0,5.09,0l42.13-24.34a5.09,5.09,0,0,0,2.54-4.4V255.33a5.09,5.09,0,0,0-2.55-4.41Z" />
+                                </clipPath>
+                                <linearGradient id="linear-gradient-3" x1="235.16" y1="285.35" x2="341.96" y2="206.44"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.14" stop-color="#3f873f" />
+                                    <stop offset="0.4" stop-color="#529f44" />
+                                    <stop offset="0.71" stop-color="#63b649" />
+                                    <stop offset="0.91" stop-color="#6abf4b" />
+                                </linearGradient>
+                                <linearGradient id="linear-gradient-4" x1="114.56" y1="53.82" x2="211.97" y2="53.82"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.09" stop-color="#6abf4b" />
+                                    <stop offset="0.29" stop-color="#63b649" />
+                                    <stop offset="0.6" stop-color="#529f44" />
+                                    <stop offset="0.86" stop-color="#3f873f" />
+                                </linearGradient>
+                                <linearGradient id="linear-gradient-5" x1="192.86" y1="279.65" x2="290.28" y2="279.65"
+                                    xlink:href="#linear-gradient-4" />
+                                <linearGradient id="linear-gradient-6" x1="114.56" y1="143.45" x2="211.97" y2="143.45"
+                                    xlink:href="#linear-gradient-4" />
+                                <linearGradient id="linear-gradient-7" x1="192.86" y1="320.03" x2="290.28" y2="320.03"
+                                    xlink:href="#linear-gradient-4" />
+                                <linearGradient id="linear-gradient-8" x1="304.47" y1="242.41" x2="244.39" y2="364.98"
+                                    xlink:href="#linear-gradient" />
+                            </defs>
+                            <title>nodejs-new-pantone-black</title>
+                            <path class="cls-2"
+                                d="M297,434.94a8.38,8.38,0,0,1-4.19-1.12l-13.34-7.89c-2-1.11-1-1.51-.36-1.74a26.25,26.25,0,0,0,6-2.74,1,1,0,0,1,1,.08l10.24,6.08a1.3,1.3,0,0,0,1.24,0l39.95-23.06a1.26,1.26,0,0,0,.61-1.08v-46.1a1.28,1.28,0,0,0-.62-1.1l-39.93-23a1.23,1.23,0,0,0-1.23,0l-39.93,23a1.28,1.28,0,0,0-.63,1.1v46.1a1.22,1.22,0,0,0,.63,1.07l10.94,6.32c5.94,3,9.58-.53,9.58-4V361.3a1.15,1.15,0,0,1,1.16-1.15h5.06a1.15,1.15,0,0,1,1.16,1.15v45.52c0,7.93-4.31,12.47-11.83,12.47-2.31,0-4.12,0-9.2-2.5l-10.48-6a8.46,8.46,0,0,1-4.19-7.29v-46.1a8.42,8.42,0,0,1,4.19-7.28L292.76,327a8.76,8.76,0,0,1,8.4,0l39.95,23.09a8.43,8.43,0,0,1,4.19,7.28v46.1a8.47,8.47,0,0,1-4.19,7.29l-39.95,23.06A8.4,8.4,0,0,1,297,434.94Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-2"
+                                d="M309.29,403.18c-17.48,0-21.14-8-21.14-14.75a1.14,1.14,0,0,1,1.15-1.15h5.17a1.15,1.15,0,0,1,1.15,1c.78,5.26,3.1,7.92,13.67,7.92,8.42,0,12-1.91,12-6.37,0-2.58-1-4.49-14.09-5.77-10.93-1.08-17.69-3.5-17.69-12.24,0-8.06,6.79-12.87,18.18-12.87,12.8,0,19.13,4.44,19.93,14a1.15,1.15,0,0,1-.3.88,1.17,1.17,0,0,1-.85.37h-5.18a1.15,1.15,0,0,1-1.12-.9c-1.25-5.53-4.27-7.3-12.48-7.3-9.19,0-10.26,3.2-10.26,5.6,0,2.9,1.26,3.75,13.67,5.39s18.11,3.92,18.11,12.55S322,403.18,309.29,403.18Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-2"
+                                d="M366.9,354.83a7.7,7.7,0,1,1-7.7-7.7A7.72,7.72,0,0,1,366.9,354.83Zm-14.16,0a6.46,6.46,0,1,0,6.44-6.44A6.46,6.46,0,0,0,352.74,354.81Zm3.57-4.3h3c1,0,3,0,3,2.28a2,2,0,0,1-1.63,2.12c1.18.08,1.26.86,1.42,2a8.51,8.51,0,0,0,.45,2.28h-1.83c0-.41-.33-2.61-.33-2.73-.12-.49-.29-.73-.9-.73H358v3.46h-1.67Zm1.63,3.79h1.34a1.16,1.16,0,0,0,1.31-1.22c0-1.18-.82-1.18-1.27-1.18h-1.38Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-3"
+                                d="M173.24,254.57a5.11,5.11,0,0,0-2.56-4.45l-42.35-24.37a5.11,5.11,0,0,0-2.33-.68h-.44a5.18,5.18,0,0,0-2.34.68L80.87,250.12a5.14,5.14,0,0,0-2.56,4.45l.09,65.63a2.51,2.51,0,0,0,1.28,2.21,2.46,2.46,0,0,0,2.54,0L107.39,308a5.17,5.17,0,0,0,2.56-4.44V272.89a5.1,5.1,0,0,1,2.55-4.42l10.72-6.18a5.1,5.1,0,0,1,2.57-.68,5,5,0,0,1,2.54.68l10.72,6.18a5.1,5.1,0,0,1,2.55,4.42v30.67a5.17,5.17,0,0,0,2.57,4.44l25.16,14.41a2.5,2.5,0,0,0,2.56,0,2.56,2.56,0,0,0,1.27-2.21Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-3"
+                                d="M377,164.34a2.56,2.56,0,0,0-3.8,2.23v65a1.82,1.82,0,0,1-.9,1.56,1.79,1.79,0,0,1-1.79,0L359.94,227a5.1,5.1,0,0,0-5.11,0l-42.37,24.45a5.09,5.09,0,0,0-2.56,4.43v48.92a5.12,5.12,0,0,0,2.56,4.43l42.37,24.47a5.12,5.12,0,0,0,5.11,0l42.38-24.47a5.14,5.14,0,0,0,2.56-4.43V182.88a5.11,5.11,0,0,0-2.63-4.47Zm-3.93,124.4a1.27,1.27,0,0,1-.64,1.11l-14.55,8.39a1.32,1.32,0,0,1-1.28,0l-14.54-8.39a1.27,1.27,0,0,1-.64-1.11v-16.8a1.28,1.28,0,0,1,.63-1.1l14.55-8.41a1.27,1.27,0,0,1,1.28,0l14.55,8.41a1.27,1.27,0,0,1,.64,1.1Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-3"
+                                d="M518.13,271.5a5.1,5.1,0,0,0,2.55-4.42V255.23a5.12,5.12,0,0,0-2.55-4.43L476,226.36a5.14,5.14,0,0,0-5.13,0l-42.35,24.46a5.09,5.09,0,0,0-2.56,4.43v48.9a5.12,5.12,0,0,0,2.58,4.44l42.1,24a5.13,5.13,0,0,0,5,0l25.46-14.15a2.56,2.56,0,0,0,0-4.46l-42.62-24.46a2.57,2.57,0,0,1-1.29-2.22V272a2.55,2.55,0,0,1,1.28-2.21l13.27-7.65a2.53,2.53,0,0,1,2.55,0l13.28,7.65a2.55,2.55,0,0,1,1.28,2.21V284a2.55,2.55,0,0,0,3.84,2.21Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-4"
+                                d="M472.84,269.21a1,1,0,0,1,1,0L482,273.9a1,1,0,0,1,.5.86v9.38a1,1,0,0,1-.5.85l-8.13,4.7a1,1,0,0,1-1,0l-8.12-4.7a1,1,0,0,1-.49-.85v-9.38a1,1,0,0,1,.49-.86Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <path class="cls-5"
+                                d="M244.12,226.61a5.09,5.09,0,0,0-5.09,0L196.9,250.92a5.09,5.09,0,0,0-2.55,4.41V304a5.08,5.08,0,0,0,2.55,4.4L239,332.74a5.09,5.09,0,0,0,5.09,0l42.13-24.34a5.09,5.09,0,0,0,2.54-4.4V255.33a5.09,5.09,0,0,0-2.55-4.41Z"
+                                transform="translate(-78.31 -164.02)" />
+                            <g class="cls-6">
+                                <path class="cls-7"
+                                    d="M238.94,226.61l-42.22,24.31a5.27,5.27,0,0,0-2.72,4.41V304a4.9,4.9,0,0,0,1.31,3.23l47.44-81.15A5.19,5.19,0,0,0,238.94,226.61Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <path class="cls-7"
+                                    d="M243,333.23a5.07,5.07,0,0,0,1.18-.49l42.18-24.34A5.2,5.2,0,0,0,289,304V255.33a5.05,5.05,0,0,0-1.54-3.54Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <path class="cls-8"
+                                    d="M286.33,250.92l-42.25-24.31a5.07,5.07,0,0,0-1.33-.53l-47.44,81.15a5.91,5.91,0,0,0,1.42,1.17l42.33,24.34a5.15,5.15,0,0,0,3.93.49l44.47-81.44A6,6,0,0,0,286.33,250.92Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <path class="cls-7"
+                                    d="M289,304V255.33a5.22,5.22,0,0,0-2.67-4.41l-42.25-24.31a5,5,0,0,0-1.56-.57l46.32,79.12A4.51,4.51,0,0,0,289,304Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <path class="cls-7"
+                                    d="M196.72,250.92a5.27,5.27,0,0,0-2.72,4.41V304a5.28,5.28,0,0,0,2.73,4.4l42.33,24.34a5.14,5.14,0,0,0,3.25.63L197,250.78Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <polygon class="cls-9" points="159.32 53.65 158.74 53.98 159.51 53.98 159.32 53.65" />
+                                <path class="cls-10"
+                                    d="M286.35,308.4a5.32,5.32,0,0,0,2.49-3.24L242.52,226a5.16,5.16,0,0,0-3.58.57l-42,24.17,45.33,82.59a5.19,5.19,0,0,0,1.86-.63Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <polygon class="cls-11"
+                                    points="211.97 143.6 211.69 143.13 211.69 143.76 211.97 143.6" />
+                                <path class="cls-12"
+                                    d="M286.35,308.4l-42.18,24.34a5.19,5.19,0,0,1-1.86.63l.84,1.53L290,307.78v-.64l-1.16-2A5.32,5.32,0,0,1,286.35,308.4Z"
+                                    transform="translate(-78.31 -164.02)" />
+                                <path class="cls-13"
+                                    d="M286.35,308.4l-42.18,24.34a5.19,5.19,0,0,1-1.86.63l.84,1.53L290,307.78v-.64l-1.16-2A5.32,5.32,0,0,1,286.35,308.4Z"
+                                    transform="translate(-78.31 -164.02)" />
+                            </g>
+                        </svg>
+                        <p>NodeJS</p>
+                    </li>
+                    <li class="skillItem int">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="itemImg" viewBox="-25 0 150 150" version="1.1">
+                            <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+                            <title>logo_lockup_firebase_horizontal</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <linearGradient x1="-3.4921875%" y1="17.0217705%" x2="100.828125%" y2="92.9005574%"
+                                    id="linearGradient-1">
+                                    <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="0%" />
+                                    <stop stop-color="#FFFFFF" stop-opacity="0.08" offset="14%" />
+                                    <stop stop-color="#FFFFFF" stop-opacity="0.02" offset="61%" />
+                                    <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%" />
+                                </linearGradient>
+                                <path
+                                    d="M82.9772396,29.3001042 C82.7905832,28.2019735 82.006921,27.2996977 80.9457428,26.9611238 C79.8845645,26.6225499 78.7231523,26.9042407 77.935,27.6913542 L62.4656771,43.1979167 L50.3032292,20.0423437 C49.7881501,19.0632764 48.7729575,18.4502503 47.6666667,18.4502503 C46.5603759,18.4502503 45.5451832,19.0632764 45.0301042,20.0423437 L38.3791146,32.7038021 L21.6957813,1.58640625 C21.0907142,0.456172309 19.8304402,-0.160237162 18.5668041,0.0560000403 C17.3031679,0.272237242 16.3195652,1.27262561 16.1247396,2.53973958 L0,105.760417 L43.1234375,129.936354 C45.8313744,131.448305 49.1295631,131.448305 51.8375,129.936354 L95.3333333,105.760417 L82.9772396,29.3001042 Z"
+                                    id="path-2" />
+                                <path
+                                    d="M106.687109,35.2741735 C106.501106,34.1765218 105.720184,33.2746395 104.662716,32.9362133 C103.605248,32.5977871 102.447896,32.879355 101.6625,33.6661252 L86.2472656,49.1659245 L74.1273437,26.0204508 C73.6140657,25.0418105 72.6024227,24.4290518 71.5,24.4290518 C70.3975773,24.4290518 69.3859343,25.0418105 68.8726562,26.0204508 L62.2449219,38.6763869 L45.6199219,7.57256284 C45.0169705,6.44282185 43.761103,5.82668123 42.5018852,6.04282412 C41.2426674,6.25896701 40.2625038,7.25891906 40.0683594,8.52548038 L24,111.701138 L66.9726562,135.866531 C69.6711248,137.377823 72.9577814,137.377823 75.65625,135.866531 L119,111.701138 L106.687109,35.2741735 Z"
+                                    id="path-4" />
+                            </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="styleguide">
+                                    <g id="Group-10">
+                                        <g id="logo_lockup_firebase_horizontal">
+                                            <g id="_Group_">
+                                                <g id="_Clip_Group_">
+                                                    <mask id="mask-3" fill="white">
+                                                        <use xlink:href="#path-2" />
+                                                    </mask>
+                                                    <use id="_Path_3" fill="url(#linearGradient-1)" fill-rule="nonzero"
+                                                        xlink:href="#path-2" />
+                                                    <g id="_Group_2" mask="url(#mask-3)">
+                                                        <g transform="translate(-5.958333, 0.000000)">
+                                                            <path
+                                                                d="M5.95833333,105.760417 L22.0905208,2.53229167 C22.2877205,1.26628064 23.2723073,0.268152161 24.5355067,0.0536784719 C25.7987061,-0.160795218 27.0575573,0.45642866 27.6615625,1.58640625 L44.3448958,32.7038021 L50.9958854,20.0423437 C51.5109645,19.0632764 52.5261571,18.4502503 53.6324479,18.4502503 C54.7387387,18.4502503 55.7539313,19.0632764 56.2690104,20.0423437 L101.291667,105.760417 L5.95833333,105.760417 Z"
+                                                                id="_Path_" fill="#FFA000" fill-rule="nonzero" />
+                                                            <g id="_Group_3" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd"
+                                                                transform="translate(0.000000, 26.067708)">
+                                                                <image id="Bitmap" opacity="0.12" x="0" y="0"
+                                                                    width="64.796875" height="82.671875"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAABvCAYAAACZ4VysAAAABGdBTUEAA1teXP8meAAAEqNJREFUeAHtnd9y28iVxrsb4D/9p2zJsq2dyDOxJ6NULrbyAJsHyK1fYV/D0WvkFeY2Vbn1XuUilYtUKrOT2ZSjZCRLsizLkkxRJIHu/Z0mQVMySYkkIJKKYUMNoAGw8eHj16dP92lq55z6vGSDQJjNbSfjrpqlkzqaYkGmzkOZFvROgpuACor62+dKf3eo9OYKuH6rnNJa3RbI+hZfZKYsad8cZLcA9b9+pcxfdlSwdrFujq3VZWPcfnHH/mJdxf/zUtkXkFho3L4ug427BW4L2Ie/VEH5YD1U+Uo+Cku5KI5NGAQ2jKoNVZ+tHz/Yifb+pOKsATYZvLCx3TJhrNp7lFOLp6WLklqMdf1eWGisSCr7clzyhdlyfpaFvTuaC2s30dftP26Ec+FxAbIuaB0s891fcjbMORU3tA3ex86ZubDitrc37Obz7QYarLOShzvDXGHhl6+UWS58yLl8MBvpcBlWPtTK/ES5+Eufsi/HJV/Ok/OzZO/dYG6Lta/+gM4Wo2KoG/ORs/cB9LHT7rF2uoRRVsUug8G2EWpdrcVh7dXBerT5fMdmxd47wdyEtfXieU7ZWskGwZJyehVTAGDdf5B+0Uofy3Gfz3lyfpbsnX5wE9ZiHeRVvhAZPa9juwwbHzRlQT9EVZEH/VD25bjky3lyPuwNRas9e1Ou3aYe3E7WNnIXMzoMF12g7xunVpGBVfC676y7L6nsy3HJl/Pk/CzZO93gXmGtbpi5GFZiEazSPhBg79FMWIKVCz71+25V8uU8OT9L9k41uN1Yq4WVSq0oQ6r1EpIwh60141P2/XHy/XkZs3d6we3BWiquFVlh7jLrPJVZEYdCwaeyz/HknKzZO7Xg9mKt/cjaRWRhhjWPGyHXTBUM1ovCXjkva/ZOJ7g3YC1umTkALbBiy+ugmbLP8Z7szadrOUwluAOwNgeYAiyy61NhcJu9bHv22iBcEstBHVTy6jsVyP1lIX+kZfrAHYC16GzoLVgBl39+X9jcYi8QYlXYVaMt+qwXIpcrloqPQnHqcO7Iy9SBOwhrQVOeT0AVFkq3hOx79rK3hBaLRfEAYFd1HJZdTs+e1iuFKn5gOV/4Szr0Ml3gJqxFG8U+TezapPYXLRVWgoZYB561bCcAXWIvB+ewIu5x/gO216jcVmwQL5l6rvShsJL7LT7hrY/XDgXw1DhuwFX/hofdRBNVtZJvFNyMs3nsWFpfmF4t+3URsMRCyHmWCpyXF89ep7EgnJ6FuWVuKz6I987G7wPnTgNjKlHjov6sshGVn2+P5NSZGuaKBooWiiaKNopGNrXSrja1sy9rE4g9e0E8oIYrkM7zYmCvXeM1PHTGrNZjW46icGY3PM2P6tSZDnChF+ho0ULRRNFGr5Gild5BA3u9hnawtvdXWjQYTdWivSVWaR6vgPoaGQ+cNveKRqfSLJ4KcLdAQjRQtFA0UbRRNBLE10QzRTvZ7qW1CWuTVN4U/10AyAW2ZpGIMpl8A9BfZCYOm6bZqE6dyQcXaopL8NnRRoAWFqHcfBDZe9bGa2inuBDFSVNGJmYBK9+yCACv7yL5hj8hL6cI0AvsS3N51XG/tJrFEw/uFiwT7RMNFC0UTRRtFI30WolmAtJ8S0MDjgtwsl63NBsWTprHyIlGHsTZk2KzeLLBbbFWHNpieokWiiaKNopGilYCDPaqaKemC6dln14HazPfV26wXyymdsMiMevSYO9Eg7vVYq1onzRPRQu96YU2Asiq10o002snGgrrhLGy3nTxphknX2oWp+XUmVxwr7A2aTCIJoo2Agi9u2glmgmawj55lkGA5XTO5x8vJxP2Tiy4Wzy4aG3CWumW8S7ClksRUEQOZgCXBsFAciCgdi6ZsXcywe3B2kQPLzVzRTOFf4OzNgE4M/ZOJLi9WNvFEd5s5g4PbBvglgmXqvZOHriDsPZT50wC1qDpzdk7gEN94sAdA2uTF9FVe8kc2qE+WeCOh7VtcLtZDs0W4HAO9YkCd4ysbQPcqb0AO5JDfXLAHS9r2+B2shcTZCSH+sSAOwGsbQMs7BUnkHcG4RTy0oAvQ5xF4jQS55E4kcSZ1G+c2WSAm7B2uO6bBJS0Um85wNqRHepjBxdcfYCIdGlL17b4EKSrW1pjoJUMS0oGeKRl1173IqRJPLJDfezg8hBpdN9cB9ag+ak41McLLqzlqdPqvhkUwOvOl7KN5FAfK7hSiaXYfXMdWMPkj+RQHx+4rUos5e6bYQDsd02zWTykQ31s4AprM+q+6QfWMHldm8XiRDIBHaO4QlWhe3zFeMBtsTaj7pthAOx3TU+nDjFuK4o+vXpNzxlTzJ9dsXvHAm7C2sQRnkH3TT+whsm7xF6jzAINCwaT6PvOuHKg9by1F8XD2Uq4QhB38gG3D+4V1mbUfZM8X1qpZy83w/ZVeavcLBDSxSRd+mYpJjQgVGEhV2mEh4cfAwdvHdyrrM2w+yYtYNv3wSaXxoWYZzLut0TPMWN9LV1NuqR0nD8txsFcTekXrStuF9werM2o+6YNyigbACntHL9CXwu6lh0ZoEed5jO0YbSEwRGR4+hBtKHVb8jgWW8V3F6szbD7Rp5/lEUmZICgKgatiM0aO1WaPh/Y/sBxUlM1hG3a0ERhTtsH4bbz4NLRd3vgDsLa9LpvRgaWG8QA3MAyqJKewdwjEH8Dl/fQ3QNAPoIcZyaIL+q1MFpdVBYS+eXWwJ0W1sJGMPSrZRu2qhopDFXHrAd83Xdotv0DYF9pZ//J9p6y+ljVCtX8xUzjjEGpL5rX+4EUXJPxMj2s9TIAGsiAarBWWc9A+wiAXxP9vg2o/wd7f6Ce+DtS8U8VuIM40CeqEFe/ZAYSmeKFc/1yK8zdohTdBnhMmNYKY6WyEhmos33OegJQbwB0h+1XbP/NWPs9YvoDE2W8ipXeDXVwtGCF2Yf1V39qzp2D3Mq9/DAeSbNbEtYyF0K+GBWiRn0uJnrGGHy1EunIsCRq4fbYWioLefGy3tYiQEilBbAak9UJsJ6xpO/I3EckdikWANsdyzxEVpvD2NaOQzd7BsEvauHbuvqrip9zAs/kgZXCh/Iny2ULoH7NsKTvGUyHrTJjXH6RB7hvJYy0OWTzujiGLIvnZQBgha0RlVaND6uwnvKVfuuBFdZa9SPoM+uF2c/F9i0e+9NcXVcakakdPziM/pvJiLiGyz8CK4XOFtwJZS1gJiiIPgowdVKxBsS8ouLSh2TAWLsDp3f4lu1aa/dzNnhXd+FZI4yrD8P39T9vvI/VS6DvAqyAiy63WSz7qS5b2NG/Zrj99yfLJVhbhrWP+d484zM3+fp/w4c94X3LiMU50jxiIHUAz5fpIg8sq4DirQFSr6+kR4B5gKbukb1LM0G0ds+q4NDlGsdFFX8oFecuHqrXDdFXkQEpLM/TFcTsmJuwdkcGLk+M1goKrUaBtwYuwMazlYOHQL4HWDtUWrsWgJ0ODoyLj1RgT4pVdV6xy7WVle3od7D1RYutXVHlprJkwlxwbcaM/RzZqZZLxIwx/VR+HdfSUz5wkwe5VdYCWEItYauXAdKk0pJGwQHfJOxXKi2kAE+Xr7QKNjj+EOsPc5hZYg0klVY/tgqoyZIJc+VtvvyVMh/OHoVn5xExYw0fM0YlRmiTkXjb27QQPFspUlsGKN85AJ1w7C3rHk6AHpVWrTIXzdWOF/cvVVr92Mr92kv64MJa7t7sdCxVCipXbMaMGeac8cPtWzFj/SMd2wUccUNwaDpasJkomJcBjh1TzDdk7tHK+tGOUGn1K1/qsrAFNf1cihcrhThyC5FRa4EzVFzuZ9gq39B8/Ipv6SP0bYmHK/HA4iNNuzEjoIq2etuVzUu2K3n7rLvYtTsCLiDsGR2+qQ9RaXGfnku6DwUdMogZ61n4HhmJDHQ6XE5B2zdhuWYbe+TvvNwfAJ/VvOKF/5gL7BsqrZNKZfl8bv51/XfYrkmjoJc10OPz24dTZa6wNjG9rHVLxuhHOjBfCWN5kJ+hFk/45DVWCaqTWTxSYy33/6TS4lgVoW3brlC5abvC2JAKLLLugI7do5zVZ+IbGKbS4hl6Lulpbou1MuWfNHMJFZmrETPGiLYHMEMCl2nudsaMtUObehZugIyEre1Ki2vPYav4Bi7brk5sV7fXcIntWv1wjO2KUjQ6W1qiK6MuqcnCFrTsdM7cYqej4HCtwyWw9n8B+m/YruKAIUT7oww8QwZkPl3u80kTdhSA05EFWMv01Ub9YT3PRJVzkaqv4tx4QkvnG7o/NmHuUwq5ztqKdvTN7lFfrIB6baWVtu06CNipyIKwtptzBhX0oxQ9qGJ6NeNsk/jcQcp59VwvAzBwCIfLaLbr1YL02x8d3Cta29elSO0BIPz3a79ydc3jwnalJcByUiYOl64fPsTBkWWh00LI2DnjZYBnvFRpsS8trcuV1ogOlyFw7HrJaLqXsLYVVZ4M8OCNtaf8QwrajnD4OixrE2sg8Qt07SXoV2mlZbt2RbHHwZGYmzVrO2WA8ifAZu5w6YHVwIeH19yEtdl13yRsbcsAunArDpeBUexxwdDgbvWwEFLqvklsVwH21h0uPbAa+PBwsgBru9m1dId8I70MGJ/PkNfHlKYMSoM4Z3ylhRyM1eEyMIo9LhiqQhPWdrbGksF00GyU6JtEBsbucOmB1cCHB2duwtodWmOHH1tjw7K2W6XFsbE6XAZGsccFA2kuuDa7b0ab8q+zKAlb25UWmWN3uHQWcJTtgcAVQXyZXvdN10oL1h6j2TfqLHxGZ6EMH6JYqTpcRgG089qbywKs5UL9+5+q3HFpcUbVimU689Zx1zylm3OTzK95yieMo1rhvH5d5TeqtMbpcOkEaJTtGzN3C2Bb3TdM+edKEVP+0X0jQ5LW+G4zB6JM+efarTFehX8ZVwrnZYCMiXa4XCnz0Ls3AxfWSvfNyh83gr38Eb99U5h3MuWfdmvaGH45pDnlH6lMm9qc8q8Jri8YYAqosmQ6wqX5EZPz90aysDVa942XAQGWNdMRLpMDa7Mk19u5LdYOGjMmbOUjEmsg8QtMhcMlrZd0LXM7WZu4FGMbPzUoBegxckZvUKEx0EMmq2S8V7PTMSmfsDUBdmocLknhR037a27C2ivOGWdaU/5pfWnKP8CWMCJZhLVtGWBnqhwu/glS+NMX3C1oeePum+YIRSnS2Ea4pIBHqrfoLQuw9ibOGVhZhq2MB2PaEmwx3gcyMJ4RLqkik8LNelZowtobOmc8+wFWtDUJKRrLCJcU8Ej1Ft2Ze0PWUhLpKs8z5kpIK2bWpdHZtz3CJVVkUrhZV83tpbXeEa74lTz58TblRAqkAqNh4GAskYVjHuGSAh6p3uJTWUgshCudjh5YGYegVZntWUJdw2YcrL4AWAnQuBRS1K+zMKsRLqkik8LNPpGFrY7WWGLX8oPETxnD+nMA/JrP/Alg3iMVm1Z0VlyE72CtH5Z5FxwuPFMqy2VZSFjbYdcSqF1myNyKUe4e2irzexXQUtwK7pzBRBW2m8D2DCm6vREuqSCS4k0ugduptfmCK6k4t8AUe3i7DD+U6ZYY3s5PDnrnCxGDusK7OALcA4bhjxRSlOLzTNStPsoCSHXatYwUWmmYYAOb9WsA/Jqv/RcYBfhwaZ8hBRx/y88K7EPiXWfVLk81dEjRRCGSYmHazBXWyi82ybwzDFwuMXB5gekilwBykYpLfqmJxUn0dhUWyyjtPePSCSnyt76Df5rM7WBtNHOCTzZ/35rgC+3ir6igniAFa5hbJfCvYSm8ozOSMHj1Oq2QojuIq38kz1xhrfgQ/jx7Ec67POFXesbGMSDrovQnAK44Xs5g7HuMiQNAfx2p4OBjHOy/b6XVjxj8DAC+Q1B8c6JMsdQIGzVVsK5QDLSTn2OBqI6KqxlihMa+ha0HLtZviCMYKA62XyHuah5yqnxFRhdO7l/Fo1nTKJZpHvDTVcQy+KmdbMEoXWe+nPdEbaO15igKG+8HjYO9qwD2e652hbbNWcx44fKuHhudu1A2OLXaRoFBlq2rGqdPAqNOGtqeDRMH268QdzWvyVyc3Ps/VeGyWi7UAvlxdzUfortxZEMaELGLXJWpyipho3Qe5hpEvgweB3tXAez3XL7n4DvqrF+sq1gmwDG16DwKmbOlFr/N5+xBIXYHRZd7a2r6fXhuKsfFw9rzv6po1AC4foW6K3khFZZ4DNXWS2Uf/nInyh9tMJdeJSLYwJxWlZa5suYvwii/uB+r/3wX733b7HhEj5Hrz0s/BC610MQkUwxXenimdPnCD+pQzODgyl8q+x2gvhCr7DOo/fC8lPcRXA5jlYkGKw9yx2kCKnau4PqZrR24XLd5CdzOkz3Qn8HshGTg7f8Ht00IRCI9HYQAAAAASUVORK5CYII=" />
+                                                                <polygon id="Shape" fill="#F57C00" fill-rule="nonzero"
+                                                                    points="61.6910938 39.4814063 44.3374479 6.62119792 5.95833333 79.6927083 61.6910938 39.4814063" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <g id="_Group_4" mask="url(#mask-3)">
+                                                        <g transform="translate(-2.979167, 20.109375)">
+                                                            <image id="Bitmap" fill="none" opacity="0.2" x="0" y="0"
+                                                                width="104.270833" height="113.953125"
+                                                                xlink:href="data:image/png;base64,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" />
+                                                            <path
+                                                                d="M98.3125,85.6510417 L85.9564063,9.19072917 C85.7697499,8.09259849 84.9860877,7.19032267 83.9249094,6.85174881 C82.8637312,6.51317494 81.7023189,6.79486572 80.9141667,7.58197917 L2.97916667,85.6510417 L46.1026042,109.834427 C48.8105411,111.346378 52.1087298,111.346378 54.8166667,109.834427 L98.3125,85.6510417 Z"
+                                                                id="Shape" fill="#FFCA28" fill-rule="nonzero" />
+                                                        </g>
+                                                    </g>
+                                                    <path
+                                                        d="M82.9772396,29.3001042 C82.7905832,28.2019735 82.006921,27.2996977 80.9457428,26.9611238 C79.8845645,26.6225499 78.7231523,26.9042407 77.935,27.6913542 L62.4656771,43.1979167 L50.3032292,20.0423438 C49.7881501,19.0632764 48.7729575,18.4502503 47.6666667,18.4502503 C46.5603759,18.4502503 45.5451832,19.0632764 45.0301042,20.0423438 L38.3791146,32.7038021 L21.6957812,1.58640625 C21.0907142,0.456172309 19.8304402,-0.160237162 18.5668041,0.0560000403 C17.3031679,0.272237242 16.3195652,1.27262561 16.1247396,2.53973958 L-1.26981758e-13,105.760417 L-0.0521354167,105.760417 L-1.26981758e-13,105.82 L0.42453125,106.028542 L62.4358854,43.9427083 L77.9126563,28.4510417 C78.7003872,27.6595725 79.8645807,27.3750776 80.9285569,27.7140435 C81.9925332,28.0530094 82.7776126,28.9585116 82.9623438,30.0597917 L95.2141667,105.834896 L95.3333333,105.760417 L82.9772396,29.3001042 Z M0.141510417,105.618906 L16.1321875,3.26963542 C16.3270132,2.00252145 17.3106159,1.00213308 18.574252,0.785895874 C19.8378882,0.569658672 21.0981622,1.18606814 21.7032292,2.31630208 L38.3865625,33.4336979 L45.0375521,20.7722396 C45.5526312,19.7931722 46.5678238,19.1801462 47.6741146,19.1801462 C48.7804054,19.1801462 49.795598,19.7931722 50.3106771,20.7722396 L62.2273438,43.43625 L0.141510417,105.618906 Z"
+                                                        id="_Compound_Path_" fill-opacity="0.2" fill="#FFFFFF"
+                                                        fill-rule="nonzero" mask="url(#mask-3)" />
+                                                    <path
+                                                        d="M51.8375,129.213906 C49.1295631,130.725857 45.8313744,130.725857 43.1234375,129.213906 L0.104270833,105.097552 L0,105.760417 L43.1234375,129.936354 C45.8313744,131.448305 49.1295631,131.448305 51.8375,129.936354 L95.3333333,105.760417 L95.2216146,105.075208 L51.8375,129.213906 Z"
+                                                        id="_Path_2" fill="#A52714" fill-rule="nonzero" opacity="0.2"
+                                                        mask="url(#mask-3)" />
+                                                </g>
+
+                                            </g>
+                                            <mask id="mask-5" fill="white">
+                                                <use xlink:href="#path-4" />
+                                            </mask>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <p>Firebase</p>
+                    </li>
+                    <li class="skillItem int">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 0 150 150">
+                            <path d="M-18.458 6.58h191.151v132.49H-18.458V6.58z" fill="none" />
+                            <path
+                                d="M40.054 113.583h-5.175c-.183-8.735-.687-16.947-1.511-24.642h-.046l-7.879 24.642h-3.94l-7.832-24.642h-.045c-.581 7.388-.947 15.602-1.099 24.642H7.81c.304-10.993 1.068-21.299 2.289-30.919h6.414l7.465 22.719h.046l7.511-22.719h6.137c1.344 11.268 2.138 21.575 2.382 30.919M62.497 90.771c-2.107 11.434-4.887 19.742-8.337 24.928-2.688 3.992-5.633 5.99-8.84 5.99-.855 0-1.91-.258-3.16-.77v-2.757c.611.088 1.328.138 2.152.138 1.498 0 2.702-.412 3.62-1.238 1.098-1.006 1.647-2.137 1.647-3.388 0-.858-.428-2.612-1.282-5.268L42.618 90.77h5.084l4.076 13.19c.916 2.995 1.298 5.086 1.145 6.277 2.229-5.953 3.786-12.444 4.673-19.468h4.901v.002z"
+                                fill="#5d87a1" />
+                            <path
+                                d="M131.382 113.583h-14.7V82.664h4.945v27.113h9.755v3.806zM112.834 114.33l-5.684-2.805c.504-.414.986-.862 1.42-1.381 2.416-2.838 3.621-7.035 3.621-12.594 0-10.229-4.014-15.346-12.045-15.346-3.938 0-7.01 1.298-9.207 3.895-2.414 2.84-3.619 7.022-3.619 12.551 0 5.435 1.068 9.422 3.205 11.951 1.955 2.291 4.902 3.438 8.843 3.438 1.47 0 2.819-.18 4.048-.543l7.4 4.308 2.018-3.474zm-18.413-6.934c-1.252-2.014-1.878-5.248-1.878-9.707 0-7.785 2.365-11.682 7.1-11.682 2.475 0 4.289.932 5.449 2.792 1.25 2.017 1.879 5.222 1.879 9.619 0 7.849-2.367 11.774-7.099 11.774-2.476.001-4.29-.928-5.451-2.796M85.165 105.013c0 2.622-.962 4.773-2.884 6.458-1.924 1.678-4.504 2.519-7.737 2.519-3.024 0-5.956-.966-8.794-2.888l1.329-2.655c2.442 1.223 4.653 1.831 6.638 1.831 1.863 0 3.319-.413 4.375-1.232 1.055-.822 1.684-1.975 1.684-3.433 0-1.837-1.281-3.407-3.631-4.722-2.167-1.19-6.501-3.678-6.501-3.678-2.349-1.712-3.525-3.55-3.525-6.578 0-2.506.877-4.529 2.632-6.068 1.757-1.545 4.024-2.315 6.803-2.315 2.87 0 5.479.769 7.829 2.291l-1.192 2.656c-2.01-.854-3.994-1.281-5.951-1.281-1.585 0-2.809.381-3.66 1.146-.858.762-1.387 1.737-1.387 2.933 0 1.828 1.308 3.418 3.722 4.759 2.196 1.192 6.638 3.723 6.638 3.723 2.409 1.709 3.612 3.53 3.612 6.534"
+                                fill="#f8981d" />
+                            <path
+                                d="M137.59 72.308c-2.99-.076-5.305.225-7.248 1.047-.561.224-1.453.224-1.531.933.303.3.338.784.601 1.198.448.747 1.229 1.752 1.942 2.276.783.6 1.569 1.194 2.393 1.717 1.453.899 3.1 1.422 4.516 2.318.825.521 1.645 1.195 2.471 1.756.406.299.666.784 1.193.971v-.114c-.264-.336-.339-.822-.598-1.196l-1.122-1.082c-1.084-1.456-2.431-2.727-3.884-3.771-1.196-.824-3.812-1.944-4.297-3.322l-.076-.076c.822-.077 1.797-.375 2.578-.604 1.271-.335 2.43-.259 3.734-.594.6-.15 1.195-.338 1.797-.523v-.337c-.676-.673-1.158-1.567-1.869-2.203-1.902-1.643-3.998-3.25-6.164-4.595-1.16-.749-2.652-1.231-3.887-1.868-.445-.225-1.195-.336-1.457-.71-.67-.822-1.047-1.904-1.533-2.877-1.08-2.053-2.129-4.331-3.061-6.502-.674-1.456-1.084-2.91-1.906-4.257-3.85-6.35-8.031-10.196-14.457-13.971-1.381-.786-3.024-1.121-4.779-1.533l-2.803-.148c-.598-.262-1.197-.973-1.719-1.309-2.132-1.344-7.621-4.257-9.189-.411-1.01 2.431 1.494 4.821 2.354 6.054.635.856 1.458 1.83 1.902 2.802.263.635.337 1.309.6 1.98.598 1.644 1.157 3.473 1.943 5.007.41.782.857 1.604 1.381 2.312.3.414.822.597.936 1.272-.521.744-.562 1.867-.861 2.801-1.344 4.221-.819 9.45 1.086 12.552.596.934 2.018 2.99 3.92 2.202 1.684-.672 1.311-2.801 1.795-4.668.111-.451.038-.747.262-1.043v.073c.521 1.045 1.047 2.052 1.53 3.1 1.159 1.829 3.177 3.735 4.858 5.002.895.676 1.604 1.832 2.725 2.245V74.1h-.074c-.227-.335-.559-.485-.857-.745-.674-.673-1.42-1.495-1.943-2.241-1.566-2.093-2.952-4.41-4.182-6.801-.602-1.16-1.121-2.428-1.606-3.586-.226-.447-.226-1.121-.601-1.346-.562.821-1.381 1.532-1.791 2.538-.711 1.609-.785 3.588-1.049 5.646l-.147.072c-1.19-.299-1.604-1.53-2.056-2.575-1.119-2.654-1.307-6.914-.336-9.976.26-.783 1.385-3.249.936-3.995-.225-.715-.973-1.122-1.383-1.685-.482-.708-1.01-1.604-1.346-2.39-.896-2.091-1.347-4.408-2.312-6.498-.451-.974-1.234-1.982-1.868-2.879-.712-1.008-1.495-1.718-2.058-2.913-.186-.411-.447-1.083-.148-1.53.073-.3.225-.412.523-.487.484-.409 1.867.111 2.352.336 1.385.56 2.543 1.083 3.699 1.867.523.375 1.084 1.085 1.755 1.272h.786c1.193.26 2.538.072 3.661.41 1.979.636 3.772 1.569 5.38 2.576 4.893 3.103 8.928 7.512 11.652 12.778.447.858.637 1.644 1.045 2.539.787 1.832 1.76 3.7 2.541 5.493.785 1.755 1.533 3.547 2.654 5.005.559.784 2.805 1.195 3.812 1.606.745.335 1.905.633 2.577 1.044 1.271.783 2.537 1.682 3.732 2.543.595.448 2.465 1.382 2.576 2.13M99.484 39.844a5.82 5.82 0 0 0-1.529.188v.075h.072c.301.597.824 1.011 1.197 1.532.301.599.562 1.193.857 1.791l.072-.074c.527-.373.789-.971.789-1.868-.227-.264-.262-.522-.451-.784-.22-.374-.705-.56-1.007-.86"
+                                fill="#5d87a1" />
+                            <path
+                                d="M141.148 113.578h.774v-3.788h-1.161l-.947 2.585-1.029-2.585h-1.118v3.788h.731v-2.882h.041l1.078 2.882h.557l1.074-2.882v2.882zm-6.235 0h.819v-3.146h1.072v-.643h-3.008v.643h1.115l.002 3.146z"
+                                fill="#f8981d" />
+                        </svg>
+                        <p>MySql</p>
+                    </li>
+                </ul>
+                <div class="about-img-wrapper">
+                    <img class=about-img src="">
+                </div>
             </section>
             <footer class="section-container contact-section" id="contact-anchor">
-              <h2 class="section-heading">Contact</h2>
-              <div class="contact-item">
-                  <h4 class="contact-heading">Email</h4>
-                  <p class="contact-info">daniel.l.babin@gmail.com</p>
-              </div>
-              <div class="contact-item">
-                <ul class="social-link-list">
-                  <li class="social-link-item">
-                    <a href="#">Github</a>
-                  </li>
-                  <li class="social-link-item">
-                    <a href="#">LinkedIn</a>
-                  </li>
-                  <li class="social-link-item">
-                    <a href="#">CodePen</a>
-                  </li>
-                </ul>
-              </div>
+                <h2 class="section-heading">Contact</h2>
+                <div class="contact-item">
+                    <h4 class="contact-heading">Email</h4>
+                    <p class="contact-info">daniel.l.babin@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <ul class="social-link-list">
+                        <li class="social-link-item">
+                            <a href="#">Github</a>
+                        </li>
+                        <li class="social-link-item">
+                            <a href="#">LinkedIn</a>
+                        </li>
+                        <li class="social-link-item">
+                            <a href="#">CodePen</a>
+                        </li>
+                    </ul>
+                </div>
             </footer>
-            </div>
-          </main>
-        <script src="./scripts/scripts.js"></script>
-    </body>
+        </div>
+    </main>
+</body>
+
 </html>

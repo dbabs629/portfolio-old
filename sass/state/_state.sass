@@ -8,12 +8,58 @@ ul a:hover
 .active:hover
   background-color: $tertiary-color
 
-.animation-daniel
-  animation: daniel-slide 1s ease-in-out 0s 1 alternate
+.slide-left
+  animation: slide-left 2s ease-in 1s 2 alternate
   animation-fill-mode: both
 
-@keyframes daniel-slide
+.slide-right
+  animation: slide-right 2s ease-in 1s 2 alternate
+  animation-fill-mode: both
+
+@keyframes slide-left
   0%
-    opacity: 100
-  100% 
+    opacity: 1
+  60%
+    transform: translateX(-15px)
+  100%
     opacity: 0
+    transform: translateX(-2000px)
+
+@keyframes slide-right
+  0%
+    opacity: 1
+  60%
+    transform: translateX(15px)
+  99.9% 
+    transform: translateX(2000px)
+  100%
+    opacity: 0
+    transform: translateX(-4000px)
+
+@media only screen and (max-width: 950px)
+
+  body
+    background-position: 0px 50px 0px 0px
+    overflow: hidden
+
+  main
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "header header" "nav nav" "content content" "contact contact"
+
+  nav
+    gap: 0
+
+  .animation-wrapper
+    max-height: 90vh
+
+  .section-heading
+    display: none
+
+  .project-section
+    flex-flow: column wrap
+
+  .article-wrapper
+    max-width: 100%
+
+  .project-img
+    opacity: 1.0
