@@ -6,14 +6,27 @@ let aboutTab = document.getElementsByClassName("about-tab")[0];
 let contactTab = document.getElementsByClassName("contact-tab")[0];
 let contentContainer = document.getElementsByClassName("content-container")[0];
 let bodyTag = document.getElementsByTagName("body")[0];
+let downloadResume = document.getElementsByClassName("download-link")[0];
+
+//give user the option to continue to download the resume after they click the button.
+//displays a confirm alert and if the user clicks "OK" button the user will download the pdf
+//if the user clicks no, it will prevent the download by preventing the click action on the target element
+downloadResume.addEventListener("click", function (e) {
+  console.log("download button clicked");
+  if (window.confirm("Would you like to continue to download the pdf?")) {
+    return true;
+  } else {
+    e.preventDefault();
+  }
+});
 
 //on reload- remove the anchor string in url and replace with new url
-//content container created a space between nav and bottom of the page 
+//content container created a space between nav and bottom of the page
 //once the user clicked an anchor and reloaded the page
-window.addEventListener('load', function(){
+window.addEventListener("load", function () {
   var url = window.location.toString();
-  if( this.location.href.indexOf("#") != -1 ) {
-	  url = url.split("#")[0];
+  if (this.location.href.indexOf("#") != -1) {
+    url = url.split("#")[0];
     location.replace(url);
     console.log(url);
   }
@@ -43,15 +56,20 @@ navTabs[0].addEventListener("click", function (e) {
     if (tabElement !== "a") {
       tabClicked = tabClicked.parentElement;
       tabClicked.classList.add("active");
-      
+
       //I added this code after the .active class was added to the clicked tab and element
       let notActive = navTabs[0].querySelectorAll("a:not(.active)");
-      for(var i = 0; i < notActive.length; i++){
+      for (var i = 0; i < notActive.length; i++) {
         // console.log(notActive[i].classList[0]);
-        let notSelected = notActive[i].classList[0].substring(0, notActive[i].classList[0].length - 4);
-        let noDisplay = document.getElementsByClassName(notSelected + "-section")[0];
+        let notSelected = notActive[i].classList[0].substring(
+          0,
+          notActive[i].classList[0].length - 4
+        );
+        let noDisplay = document.getElementsByClassName(
+          notSelected + "-section"
+        )[0];
         noDisplay.style.display = "none";
-      };
+      }
       let tabSection = tabClass.substring(0, tabClass.length - 4);
       let sectionDisplay = document.getElementById(tabSection + "-anchor");
       sectionDisplay.style.display = "flex";
@@ -82,4 +100,3 @@ window.addEventListener("scroll", function (event) {
     console.log(scrollPos);
   }
 });
-

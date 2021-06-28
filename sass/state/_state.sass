@@ -8,13 +8,19 @@ ul a:hover
 .active:hover
   background-color: $tertiary-color
 
+.download-img
+  animation: bounce 1s ease-in 2s infinite alternate
+
+@keyframes bounce
+  0%
+    transform: translateY(-1.5px)
+  50%
+    transform: translateY(0px)
+  100%
+    transform: translateY(1.5px)
+
 .slide-left
   animation: slide-left 2s ease-in 1s 2 alternate
-  animation-fill-mode: both
-
-.slide-right
-  animation: slide-right 2s ease-in 1s 2 alternate
-  animation-fill-mode: both
 
 @keyframes slide-left
   0%
@@ -24,6 +30,9 @@ ul a:hover
   100%
     opacity: 0
     transform: translateX(-2000px)
+
+.slide-right
+  animation: slide-right 2s ease-in 1s 2 alternate
 
 @keyframes slide-right
   0%
