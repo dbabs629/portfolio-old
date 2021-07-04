@@ -16,18 +16,30 @@ section, header
 .header-section
   grid-area: header
   width: 100%
+  max-height: 95vh
   height: 95vh
   color: $tertiary-color
 
+.header-wrapper p 
+  padding-top: 1%
+
 nav
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr
-  grid-template-areas: "nav-links social-links"
+  // display: grid
+  // grid-template-columns: 1fr 1fr
+  // grid-template-rows: 1fr
+  // grid-template-areas: "nav-links social-links"
   grid-area: nav
+  max-width: 100%
+  max-height: 5vh
+  width: 100%
+  height: auto
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
   justify-content: space-between
-  gap: 15vw
+  gap: 5%
   background-color: $highlight
+  margin-bottom: 0
 
 .content-container
   display: none

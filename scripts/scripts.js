@@ -6,19 +6,7 @@ let aboutTab = document.getElementsByClassName("about-tab")[0];
 let contactTab = document.getElementsByClassName("contact-tab")[0];
 let contentContainer = document.getElementsByClassName("content-container")[0];
 let bodyTag = document.getElementsByTagName("body")[0];
-let downloadResume = document.getElementsByClassName("download-link")[0];
-
-//give user the option to continue to download the resume after they click the button.
-//displays a confirm alert and if the user clicks "OK" button the user will download the pdf
-//if the user clicks no, it will prevent the download by preventing the click action on the target element
-downloadResume.addEventListener("click", function (e) {
-  console.log("download button clicked");
-  if (window.confirm("Would you like to continue to download the pdf?")) {
-    return true;
-  } else {
-    e.preventDefault();
-  }
-});
+// let downloadResume = document.getElementsByClassName("download-link")[0];
 
 //on reload- remove the anchor string in url and replace with new url
 //content container created a space between nav and bottom of the page
@@ -31,6 +19,18 @@ window.addEventListener("load", function () {
     console.log(url);
   }
 });
+
+//give user the option to continue to download the resume after they click the button.
+//displays a confirm alert and if the user clicks "OK" button the user will download the pdf
+//if the user clicks no, it will prevent the download by preventing the click action on the target element
+// downloadResume.addEventListener("click", function (e) {
+//   console.log("download button clicked");
+//   if (window.confirm("Would you like to continue to download the pdf?")) {
+//     return true;
+//   } else {
+//     e.preventDefault();
+//   }
+// });
 
 //select the tab with the active class and remove it
 //if the active tab is not a 'a' tag then get parentElement of the li that was clicked and add .active
@@ -99,4 +99,18 @@ window.addEventListener("scroll", function (event) {
   } else {
     console.log(scrollPos);
   }
+});
+let value;
+//email
+let submitForm = document.getElementsByTagName("form")[0];
+submitForm.addEventListener("submit", function (e) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "send_email.php", true);
+
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(
+    JSON.stringify({
+      value: value,
+    })
+  );
 });
