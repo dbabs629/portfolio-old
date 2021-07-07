@@ -3,7 +3,6 @@
     flex-flow: column nowrap
     align-items: center
     text-align: center
-    // padding-top: 1%
 
 .download-link
     display: inline
@@ -28,7 +27,6 @@
     max-height: 45vh
     height: auto
     text-align: center
-    // background-color: rgba(100, 100, 100, 0.2)
 
 .header-animation
     max-width: 100%
@@ -45,7 +43,7 @@
 
 //Nav
 .nav-link-item
-    padding: 15px
+    padding: 2vmax
 
 .nav-link-list a
     padding: 2% 0%
@@ -55,7 +53,6 @@
     stroke: $tertiary-color
 
 //project
-
 .section-heading
     width: 100%
     height: auto
@@ -67,7 +64,6 @@
 .article-wrapper
     display: flex
     flex-flow: row wrap
-    //flex-flow: column wrap---Mobile
     max-width: 50%
     width: 100%
     height: auto
@@ -127,8 +123,8 @@
     height: auto
     padding-inline-start: 0
     margin: 0 auto
-    gap: 5%
-    margin-top: 10%
+    gap: 15%
+    // margin-top: 10%
 
 .project-link-list a
     max-width: 125px
@@ -153,9 +149,11 @@
     background-color: rgb(25, 25, 212)
 
 .project-description
-    font-size: $font-sm
+    font-size: 75%
     color: rgb(85, 85, 85)
-    width: 85%
+    max-width: 100%
+    width: 100%
+    height: 20vmax
     margin: 0 auto
 
 .project-heading
@@ -163,21 +161,11 @@
     margin: 0 auto
 
 .about-section
-    // max-width: 600px
     position: relative
     flex-flow: column nowrap
     width: 100%
     height: auto
     margin-bottom: 10%
-
-// .about-section:after
-//   position: absolute
-//   content: ""
-//   display: block
-//   width: 100%
-//   height: 0.1px
-//   background-color: lightgrey
-//   top: 20%
 
 .skill-header
     text-align: center
@@ -235,18 +223,22 @@
     border-top: 1px solid lightgrey
     margin-bottom: 15%
 
-// .contact-section:after
-//   position: absolute
-//   content: ""
-//   display: block
-//   width: 100%
-//   height: 0.1px
-//   background-color: lightgrey
-//   top: 27%
-
 .contact-item
     display: block
     position: relative
     width: 100%
     height: auto
     margin: 2.5% auto
+
+.modal
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    max-width: 25%
+    width: 100%
+    height: auto
+    color: white
+    background-color: grey

@@ -45,6 +45,16 @@ ul a:hover
     opacity: 0
     transform: translateX(-4000px)
 
+@media only screen and (max-width: 975px)
+  .project-section
+    flex-flow: column wrap
+
+  .article-wrapper
+    max-width: 100%
+
+  .project-description
+    max-width: 85%
+
 @media only screen and (max-width: 675px)
   body
     background-position: 0px 50px 0px 0px
@@ -64,17 +74,10 @@ ul a:hover
   .section-heading
     display: none
 
-  .project-section
-    flex-flow: column wrap
-
-  .article-wrapper
-    max-width: 100%
-
   .project-img
     opacity: 1.0
 
   .nav-link-item
-    // font-size: 80%
     font-weight: 600
 
   ul a

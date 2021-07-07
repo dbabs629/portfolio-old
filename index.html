@@ -12,6 +12,10 @@
 <body>
     <!-- Page Container -->
     <main class="main-container">
+        <div class="modal">
+            <p>Thank you, your email has been sent!</p>
+            <button class="close-modal">close</button>
+        </div>
         <header class="header-section">
             <div class="header-wrapper">
                 <!-- <h1 class="header-title">Daniel Babin</h1> -->
@@ -110,9 +114,7 @@
                             </a>
                         </div>
                         <div class="project-item project-info">
-                            <p class="project-description">The replaced content is sized to maintain its aspect ratio
-                                while filling the element’s entire content box. If the object's aspect ratio does not
-                                match the aspect ratio of its box, then the object will be clipped to fit.</p>
+                            <p class="project-description">I created a Rock Paper Scissors Lizard Spock game using HTML, CSS and JavaScript. The game design was created by Front-end Mentor who provides photos of what the final game should look like along with some colors and images. My Clock, Countdown and IP Tracker project examples are also from https://www.frontendmentor.io/ and I used HTML, CSS and JavaScript to code them from scratch.</p>
                             <ul class="project-link-list">
                                 <a href="http://getdaniel.me/rockpaperscissors/" target="_blank"
                                     rel="noreferrer noopener">
@@ -777,7 +779,7 @@
                 <h2 class="section-heading">Contact</h2>
                 <div class="contact-item">
                     <h4 class="contact-heading">Email</h4>
-                    <form method="post" name="email-form" action="send_email.php">
+                    <form class="contact-form" method="post" name="email-form" action="send_email.php">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name..">
                         <label for="email">Email</label>

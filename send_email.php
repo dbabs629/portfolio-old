@@ -7,44 +7,44 @@
     $message = $_POST['message'];
     $header = 'From: '. $name . ' <' . $email . '>\r\n';
     if (empty($_POST["name"])) {
-        $nameErr = "Name is required";
-        echo $nameErr;
-      } else {
-        $name = $_POST["name"];
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-          $nameErr = "Only letters and white space allowed";
-        }
+      $nameErr = "Name is required <br>";
+      echo $nameErr;
+    } else {
+      $name = $_POST["name"];
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+        $nameErr = "Only letters and white space allowed <br>";
       }
+    }
+  
+    if (empty($_POST["email"])) {
+      $emailErr = "Email is required <br>";
+      echo $emailErr;
+    } else {
+      $email = $_POST["email"];
+      // check if e-mail address is well-formed
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format <br>";
+      }
+    }
     
-      if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-        echo $emailErr;
-      } else {
-        $email = $_POST["email"];
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $emailErr = "Invalid email format";
-        }
-      }
-      
-      if (empty($_POST["subject"])) {
-        $subjectErr = "A subject is required";
-        echo $subjectErr;
-      } else {
-        $subject = $_POST["subject"];
-      }
-    
-      if (empty($_POST["message"])) {
-        $messageErr = "A message is required";
-        echo $messageErr;
-      } else {
-        $message = $_POST["message"];
-      }
-    
+    if (empty($_POST["subject"])) {
+      $subjectErr = "A subject is required <br>";
+      echo $subjectErr;
+    } else {
+      $subject = $_POST["subject"];
+    }
+  
+    if (empty($_POST["message"])) {
+      $messageErr = "A message is required <br>";
+      echo $messageErr;
+    } else {
+      $message = $_POST["message"];
+    }
+  
     if(mail($to, $subject, $message, $header)){
-        echo json_encode($_POST['email-form'];
-        header("Location: https://getdaniel.me/portfolio/#contact-anchor", TRUE, 301);
+        header("Location: https://getdaniel.me/portfolio/", TRUE, 301);
+        echo "Your email was sent!";
         exit();
     } else {
         echo "Unable to send email.";

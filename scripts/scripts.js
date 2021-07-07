@@ -100,17 +100,7 @@ window.addEventListener("scroll", function (event) {
     console.log(scrollPos);
   }
 });
-let value;
-//email
-let submitForm = document.getElementsByTagName("form")[0];
-submitForm.addEventListener("submit", function (e) {
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_email.php", true);
 
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(
-    JSON.stringify({
-      value: value,
-    })
-  );
-});
+// window.addEventListener('load', function(){
+//   modalContainer.style.display = 'block';
+// });
