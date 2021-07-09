@@ -12,10 +12,6 @@
 <body>
     <!-- Page Container -->
     <main class="main-container">
-        <div class="modal">
-            <p>Thank you, your email has been sent!</p>
-            <button class="close-modal">close</button>
-        </div>
         <header class="header-section">
             <div class="header-wrapper">
                 <!-- <h1 class="header-title">Daniel Babin</h1> -->
@@ -252,8 +248,7 @@
                 <h3 class="skill-header">Skills</h3>
                 <ul class="skillList">
                     <li class='skillItem adv'>
-                        <!-- PNG Retrieved from https://cdn.worldvectorlogo.com/logos/javascript-1.svg -->
-                        <!-- <img class="jsLogo itemImg" src="assets/1x/Asset 3.png" width="80"> -->
+                        <!-- PNG from https://cdn.worldvectorlogo.com/logos/javascript-1.svg -->
                         <svg xmlns="http://www.w3.org/2000/svg" id="svg4525" class="itemImg" viewBox="-50 -50 350 350">
                             <style>
                                 .st0 {
@@ -289,7 +284,7 @@
                         </svg>
                         <p>JavaScript</p>
                     </li>
-                    <!-- Image retrieved from REACTJS.com -->
+                    <!-- Image from REACTJS.com -->
                     <li class='skillItem adv'>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             id="Layer_2_1_" x="0px" y="0px" viewBox="150 50 550 550" xml:space="preserve">
@@ -304,7 +299,7 @@
                         <p>React</p>
                     </li>
                     <li class='skillItem adv'>
-                        <!-- SVG Retrieved from https://www.w3.org/html/logo/ -->
+                        <!-- SVG from https://www.w3.org/html/logo/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 0 512 512">
                             <title>HTML5 Logo</title>
                             <polygon fill="#E44D26"
@@ -322,7 +317,7 @@
                         </svg>
                         <p>HTML5</p>
                     </li>
-                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/css3.svg -->
+                    <!-- SVG from https://cdn.worldvectorlogo.com/logos/css3.svg -->
                     <li class='skillItem adv'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 0 512 512">
                             <path d="M0 0h538.584v538.583H0V0z" fill="none" />
@@ -369,7 +364,7 @@
                     </li>
                 </ul>
                 <ul class="skillList">
-                    <!-- SVG retrieved from https://getbootstrap.com/ -->
+                    <!-- SVG from https://getbootstrap.com/ -->
                     <li class="skillItem adv">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             class="itemImg" viewBox="0 -100 1000 1000" focusable="false" role="img">
@@ -441,7 +436,7 @@
                         </svg>
                         <p>Bootstrap</p>
                     </li>
-                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/sass-1.svg -->
+                    <!-- SVG from https://cdn.worldvectorlogo.com/logos/sass-1.svg -->
                     <li class="skillItem adv">
                         <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 -50 512 512">
                             <path fill="#CF649A"
@@ -449,7 +444,7 @@
                         </svg>
                         <p>Sass</p>
                     </li>
-                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/photoshop-cc.svg -->
+                    <!-- SVG from https://cdn.worldvectorlogo.com/logos/photoshop-cc.svg -->
                     <li class="skillItem adv">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 240 234" style="enable-background:new 0 0 240 234;" xml:space="preserve">
                             <style type="text/css">
@@ -474,7 +469,7 @@
                             </svg>
                         <p>Photoshop</p>
                     </li>
-                    <!-- SVG retrieved from https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg -->
+                    <!-- SVG from https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg -->
                     <li class="skillItem adv">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             class="itemImg" x="0px" y="0px" viewBox="0 0 2800 2800" xml:space="preserve">
@@ -502,7 +497,7 @@
                     </li>
                 </ul>
                 <ul class="skillList">
-                    <!-- SVG retrieved https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc.svg -->
+                    <!-- SVG https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc.svg -->
                     <li class="skillItem adv">
                         <svg xmlns="http://www.w3.org/2000/svg" class="itemImg" viewBox="0 130.746 625 625">
                             <path
@@ -511,7 +506,7 @@
                         </svg>
                         <p>Ilustrator</p>
                     </li>
-                    <!-- SVG retrieved from https://nodejs.org/en/about/resources/ -->
+                    <!-- SVG from https://nodejs.org/en/about/resources/ -->
                     <li class='skillItem int'>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1"
                             class="itemImg" data-name="Layer 1" viewBox="-10 -140 450 450">
@@ -772,15 +767,16 @@
                 <div class="contact-item">
                     <h4 class="contact-heading">Email</h4>
                     <form class="contact-form" method="post" name="email-form" action="send_email.php">
+                        <!-- HTML5 form validation patterns modified from W3schools: https://www.w3schools.com/tags/att_input_pattern.asp -->
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name..">
+                        <input type="text" id="name" name="name" placeholder="Your name.." pattern="[A-Za-z]{3}" required="required" aria-required="true" title="Use Letters only. Minimum number of characters: 3">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Your email address..">
+                        <input type="text" id="email" name="email" placeholder="Your email address.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="required" aria-required="true" title="Use Letters and Numbers only and use the proper email format">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Email subject line..">
+                        <input type="text" id="subject" name="subject" placeholder="Email subject line.." pattern="[A-Za-z0-9]{1,25}" required="required" aria-required="true" title="Use Letters and Numbers only. Character limit: 1-25">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Message.." style="max-height:200px"></textarea>
-                        <input id="submit" type="submit" name="submit" value="Submit">
+                        <textarea id="message" name="message" placeholder="Message.." style="max-height:200px" pattern="[A-Za-z0-9]{1,250}" required="required" aria-required="true" title="Use Letters and Numbers only. Character limit: 1-250"></textarea>
+                        <button id="submit" type="submit" name="submit" value="Submit">Submit</button>
                       </form>
                 </div>
             </footer>
