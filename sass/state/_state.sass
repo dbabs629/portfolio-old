@@ -55,7 +55,7 @@ ul a:hover
   .project-description
     max-width: 85%
 
-@media only screen and (max-width: 675px)
+@media only screen and (max-width: 650px)
   body
     background-position: 0px 50px 0px 0px
     overflow: hidden
@@ -64,12 +64,8 @@ ul a:hover
     grid-template-columns: 1fr 1fr
     grid-template-areas: "header header" "nav nav" "content content" "contact contact"
 
-  .header-section
-    max-height: 87vh
-
   nav
-    max-height: 6vh
-    gap: 2%
+    gap: 0%
 
   .section-heading
     display: none
@@ -78,17 +74,7 @@ ul a:hover
     opacity: 1.0
 
   .nav-link-item
-    font-weight: 600
-
-  ul a
-    padding: 0% 2%
-
-  .nav-link-item
-    font-size: 4vmin
+    font-size: 2.25vmax
 
   svg
     max-width: 10vmax
-
-@media only screen and (max-width: 375px)
-  .header-section
-    max-height: 85vh
