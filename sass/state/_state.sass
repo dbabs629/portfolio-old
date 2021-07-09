@@ -67,6 +67,15 @@ ul a:hover
   nav
     gap: 0%
 
+  h4
+    margin-block-start: 0
+    margin-block-end: 0
+    padding: 5% 0%
+
+  .project-description
+    max-height: 55vmax
+    overflow: scroll
+
   .section-heading
     display: none
 
@@ -78,3 +87,7 @@ ul a:hover
 
   svg
     max-width: 10vmax
+
+  @media only screen and (max-width: 375px)
+    .project-description
+      font-size: 75%
