@@ -100,7 +100,3 @@ window.addEventListener("scroll", function (event) {
     console.log(scrollPos);
   }
 });
-
-// window.addEventListener('load', function(){
-//   modalContainer.style.display = 'block';
-// });
