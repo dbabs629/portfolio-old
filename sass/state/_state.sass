@@ -63,9 +63,11 @@ ul a:hover
   main
     grid-template-columns: 1fr 1fr
     grid-template-areas: "header header" "nav nav" "content content" "contact contact"
+    padding: 0
+    margin: 0
 
   nav
-    gap: 0%
+    max-height: 7vh
 
   h4
     margin-block-start: 0
@@ -83,10 +85,11 @@ ul a:hover
     opacity: 1.0
 
   .nav-link-item
-    font-size: 2.25vmax
+    font-size: 1.75vmax
+    font-weight: 800
 
   svg
-    max-width: 10vmax
+    max-width: 8vmax
 
   @media only screen and (max-width: 375px)
     .project-description

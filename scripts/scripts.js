@@ -1,9 +1,4 @@
 let navTabs = document.getElementsByClassName("nav-link-list");
-let projectContent = document.getElementsByClassName("project-section");
-let aboutContent = document.getElementsByClassName("about-section");
-let projectTab = document.getElementsByClassName("project-tab")[0];
-let aboutTab = document.getElementsByClassName("about-tab")[0];
-let contactTab = document.getElementsByClassName("contact-tab")[0];
 let contentContainer = document.getElementsByClassName("content-container")[0];
 let bodyTag = document.getElementsByTagName("body")[0];
 // let downloadResume = document.getElementsByClassName("download-link")[0];
@@ -60,7 +55,6 @@ navTabs[0].addEventListener("click", function (e) {
       //I added this code after the .active class was added to the clicked tab and element
       let notActive = navTabs[0].querySelectorAll("a:not(.active)");
       for (var i = 0; i < notActive.length; i++) {
-        // console.log(notActive[i].classList[0]);
         let notSelected = notActive[i].classList[0].substring(
           0,
           notActive[i].classList[0].length - 4
@@ -93,7 +87,7 @@ window.addEventListener("scroll", function (event) {
   if (scrollPos <= 100) {
     slideD.classList.add("slide-left");
     slideB.classList.add("slide-right");
-  } else if (scrollPos > 500) {
+  } else if (scrollPos > 250) {
     slideD.classList.remove("slide-left");
     slideB.classList.remove("slide-right");
   } else {
