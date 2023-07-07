@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 let navTabs = document.getElementsByClassName('nav-link-list')
 let contentContainer = document.getElementsByClassName('content-container')[0]
 let bodyTag = document.getElementsByTagName('body')[0]
 let downloadResume = document.getElementsByClassName('download-link')[0]
+=======
+let navTabs = document.getElementsByClassName("nav-link-list");
+let contentContainer = document.getElementsByClassName("content-container")[0];
+let bodyTag = document.getElementsByTagName("body")[0];
+// let downloadResume = document.getElementsByClassName("download-link")[0];
+>>>>>>> a33116c88f837a65f36610adea684b6dcb851eeb
 
 /*
   on reload- remove the anchor string in url and replace with new url
@@ -88,10 +95,20 @@ window.addEventListener('scroll', function (event) {
   let slideB = document.getElementById('animation-babin')
   scrollPos = window.scrollY
   if (scrollPos <= 100) {
+<<<<<<< HEAD
     slideD.classList.add('slide-left')
     slideB.classList.add('slide-right')
   } else if (scrollPos > 250) {
     slideD.classList.remove('slide-left')
     slideB.classList.remove('slide-right')
+=======
+    slideD.classList.add("slide-left");
+    slideB.classList.add("slide-right");
+  } else if (scrollPos > 250) {
+    slideD.classList.remove("slide-left");
+    slideB.classList.remove("slide-right");
+  } else {
+    console.log(scrollPos);
+>>>>>>> a33116c88f837a65f36610adea684b6dcb851eeb
   }
 })
